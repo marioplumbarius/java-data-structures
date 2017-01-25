@@ -38,7 +38,7 @@ public class DequeTest {
                 });
             });
 
-            describe("#empty", () -> {
+            describe("#isEmpty", () -> {
                 describe("when it is empty", () -> {
                     beforeEach(() -> {
                         this.subject.addFirst(new Random().nextInt());
