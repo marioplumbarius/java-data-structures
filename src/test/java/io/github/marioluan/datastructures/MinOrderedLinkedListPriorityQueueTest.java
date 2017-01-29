@@ -23,7 +23,7 @@ public class MinOrderedLinkedListPriorityQueueTest {
     private MinOrderedLinkedListPriorityQueue<Integer> subject;
 
     {
-        describe("Deque", () -> {
+        describe("MinOrderedLinkedListPriorityQueue", () -> {
             beforeEach(() -> {
                 this.subject = new MinOrderedLinkedListPriorityQueue<>();
             });
