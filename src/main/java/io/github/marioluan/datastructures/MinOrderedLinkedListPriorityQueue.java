@@ -43,69 +43,36 @@ public class MinOrderedLinkedListPriorityQueue<T extends Comparable<T>>
     }
 
     /**
-     * Add the {@link T item} to the priority queue keeping the natural order
-     * of nodes.<br>
-     * <strong>Time complexity:</strong> O(N)
-     * 
-     * @param item
-     */
-    public void insert(T item) {
-        if (item == null)
-            throw new NullPointerException();
-
-        Node<T> newNode = new Node<T>(item);
-
-        if (!this.isEmpty()) {
-            if (this.head.next == null) {
-                if (newNode.compareTo(this.head) < 0) {
-                    Node<T> oldHead = this.head;
-                    newNode.next = oldHead;
-                    this.head = newNode;
-                } else {
-                    this.head.next = newNode;
-                }
-            } else {
-                Node<T> cursor = this.head;
-
-                while (cursor.next != null
-                        && newNode.compareTo(cursor.next) > 0)
-                    cursor = cursor.next;
-
-                Node<T> oldNext = cursor.next;
-                cursor.next = newNode;
-                newNode.next = oldNext;
-            }
-        } else {
-            this.head = newNode;
-        }
-
-        this.size++;
-    }
-
-    /**
-     * Add the {@link T item} to the priority queue keeping the natural order
+     * Add the {@link T data} to the priority queue keeping the natural order
      * of nodes.<br>
      * <strong>Time complexity:</strong> O(N)
      * 
      * @param data
      */
-    public void insert2(T data) {
+    public void insert(T data) {
         if (data == null)
             throw new NullPointerException();
 
         Node<T> newNode = new Node<T>(data);
-        Node<T> cursor = this.head;
-        Node<T> min = this.head;
 
-        while (cursor != null) {
-            if (Util.less(cursor, newNode)) {
-                min = cursor;
-                cursor = cursor.next;
+        if (this.head == null) {
+            this.head = newNode;
+        } else {
+            Node<T> cursor = this.head;
+            Node<T> min = this.head;
+
+            // finds the min node
+            while (cursor != null) {
+                if (Util.less(cursor, newNode)) {
+                    min = cursor;
+                    cursor = cursor.next;
+                }
             }
-        }
 
-        newNode.next = min.next;
-        min.next = newNode;
+            // sets the newNode to its position
+            newNode.next = min.next;
+            min.next = newNode;
+        }
 
         this.size++;
     }
@@ -122,7 +89,7 @@ public class MinOrderedLinkedListPriorityQueue<T extends Comparable<T>>
 
         Node<T> oldHead = this.head;
 
-        if (this.head.next != null)
+        if (this.head.hasNext())
             this.head = this.head.next;
 
         this.size--;
