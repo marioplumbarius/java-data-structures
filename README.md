@@ -34,6 +34,7 @@ gradle clean assemble
 - Priority Queue  
 -- [Ordered Linked List](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/MinOrderedLinkedListPriorityQueue.java)
 -- [Unordered Linked List](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/MinUnorderedLinkedListPriorityQueue.java)
+-- [MaxBinaryHeap](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/MaxBinaryHeap.java)
 
 ## References
 - [https://www.coursera.org/learn/algorithms-part1](https://www.coursera.org/learn/algorithms-part1)

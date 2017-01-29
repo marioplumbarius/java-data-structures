@@ -23,6 +23,19 @@ public final class Util {
     }
 
     /**
+     * Check whether {@link a} is lesser than {@link b}.
+     * 
+     * @param <T>
+     * @param a
+     * @param b
+     * @return returns whether a is lesser than b
+     */
+    @SuppressWarnings("unchecked")
+    public static <T> boolean less(T a, T b) {
+        return ((Comparable<T>) a).compareTo(b) < 0;
+    }
+
+    /**
      * Check whether {@link Comparable a} is lesser or equal to
      * {@link Comparable b}.
      *
@@ -45,6 +58,20 @@ public final class Util {
     @SuppressWarnings("rawtypes")
     public static void swap(Comparable[] a, int i, int j) {
         Comparable copy = a[i];
+        a[i] = a[j];
+        a[j] = copy;
+    }
+
+    /**
+     * Swap item in position i by item in position j from array {@link a}.
+     * 
+     * @param <T>
+     * @param a
+     * @param i
+     * @param j
+     */
+    public static <T> void swap(T[] a, int i, int j) {
+        T copy = a[i];
         a[i] = a[j];
         a[j] = copy;
     }
@@ -78,6 +105,20 @@ public final class Util {
      */
     @SuppressWarnings("rawtypes")
     public static void copy(Comparable[] a, Comparable[] aux, int lo, int hi) {
+        for (int i = lo; i <= hi; i++)
+            aux[i] = a[i];
+    }
+
+    /**
+     * Make a copy of items from array a within lo and hi bounds into array aux.
+     * 
+     * @param <T>
+     * @param a
+     * @param aux
+     * @param lo
+     * @param hi
+     */
+    public static <T> void copy(T[] a, T[] aux, int lo, int hi) {
         for (int i = lo; i <= hi; i++)
             aux[i] = a[i];
     }
