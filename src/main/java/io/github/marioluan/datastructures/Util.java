@@ -18,7 +18,7 @@ public final class Util {
      * @return returns whether a is lesser than b
      */
     @SuppressWarnings({ "rawtypes", "unchecked" })
-    protected static boolean less(Comparable a, Comparable b) {
+    public static boolean less(Comparable a, Comparable b) {
         return a.compareTo(b) < 0;
     }
 
@@ -31,7 +31,7 @@ public final class Util {
      * @return returns whether a is lesser or equal to b
      */
     @SuppressWarnings({ "rawtypes", "unchecked" })
-    protected static boolean lessOrEqual(Comparable a, Comparable b) {
+    public static boolean lessOrEqual(Comparable a, Comparable b) {
         return a.compareTo(b) < 1;
     }
 
@@ -43,7 +43,7 @@ public final class Util {
      * @param j
      */
     @SuppressWarnings("rawtypes")
-    protected static void swap(Comparable[] a, int i, int j) {
+    public static void swap(Comparable[] a, int i, int j) {
         Comparable copy = a[i];
         a[i] = a[j];
         a[j] = copy;
@@ -59,8 +59,7 @@ public final class Util {
      * @return returns the index from the element with the minimum value
      */
     @SuppressWarnings("rawtypes")
-    protected static int findMin(Comparable[] a, int lowerBound,
-            int upperBound) {
+    public static int findMin(Comparable[] a, int lowerBound, int upperBound) {
         int min = lowerBound;
         for (int i = lowerBound + 1; i < upperBound; i++)
             if (less(a[i], a[min]))
@@ -78,8 +77,7 @@ public final class Util {
      * @param hi
      */
     @SuppressWarnings("rawtypes")
-    protected static void copy(Comparable[] a, Comparable[] aux, int lo,
-            int hi) {
+    public static void copy(Comparable[] a, Comparable[] aux, int lo, int hi) {
         for (int i = lo; i <= hi; i++)
             aux[i] = a[i];
     }
