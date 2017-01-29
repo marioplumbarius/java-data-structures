@@ -4,29 +4,19 @@ import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 /**
- * Doubly linked list implementation of a double-ended queue data type.<br>
+ * Double-ended queue implementation using a doubly linked list data
+ * structure.<br>
  * <strong>Space complexity:</strong> O(n)<br>
  * 
  * @author marioluan
- * @param <Item>
+ * @param <T>
  *            the class type of elements to be handled.
  */
-public class Deque<Item> implements Iterable<Item> {
+public class Deque<T extends Comparable<T>> implements Iterable<T> {
 
-    /**
-     * Representation of items from a Deque.
-     * 
-     * @author marioluan
-     */
-    private class DoublyLinkedNode {
-        private Item             item;
-        private DoublyLinkedNode next;
-        private DoublyLinkedNode prev;
-    }
-
-    private DoublyLinkedNode head;
-    private DoublyLinkedNode tail;
-    private int              size;
+    private Node<T> head;
+    private Node<T> tail;
+    private int     size;
 
     /**
      * Construct an empty deque.
@@ -56,18 +46,17 @@ public class Deque<Item> implements Iterable<Item> {
     }
 
     /**
-     * Add the {@link Item item} to the front.<br>
+     * Add the {@link T data} to the front.<br>
      * <strong>Time complexity:</strong> O(1)<br>
      * 
-     * @param item
+     * @param data
      */
-    public void addFirst(Item item) {
-        if (item == null)
+    public void addFirst(T data) {
+        if (data == null)
             throw new NullPointerException();
 
-        DoublyLinkedNode oldHead = this.head;
-        this.head = new DoublyLinkedNode();
-        this.head.item = item;
+        Node<T> oldHead = this.head;
+        this.head = new Node<T>(data);
         this.head.next = oldHead;
 
         if (oldHead != null)
@@ -82,18 +71,17 @@ public class Deque<Item> implements Iterable<Item> {
     }
 
     /**
-     * Add the {@link Item item} to the end.<br>
+     * Add the {@link T data} to the end.<br>
      * <strong>Time complexity:</strong> O(1)<br>
      * 
-     * @param item
+     * @param data
      */
-    public void addLast(Item item) {
-        if (item == null)
+    public void addLast(T data) {
+        if (data == null)
             throw new NullPointerException();
 
-        DoublyLinkedNode oldTail = this.tail;
-        this.tail = new DoublyLinkedNode();
-        this.tail.item = item;
+        Node<T> oldTail = this.tail;
+        this.tail = new Node<T>(data);
         this.tail.prev = oldTail;
 
         if (oldTail != null)
@@ -107,16 +95,16 @@ public class Deque<Item> implements Iterable<Item> {
     }
 
     /**
-     * Remove and return the item from the front.
+     * Remove and return the data from the front.
      * <strong>Time complexity:</strong> O(1)<br>
      * 
-     * @return returns the first item
+     * @return returns the first data
      */
-    public Item removeFirst() {
+    public T removeFirst() {
         if (this.isEmpty())
             throw new NoSuchElementException();
 
-        DoublyLinkedNode oldHead = this.head;
+        Node<T> oldHead = this.head;
         this.head = this.head.next;
 
         if (this.head != null)
@@ -128,20 +116,20 @@ public class Deque<Item> implements Iterable<Item> {
         if (this.isEmpty())
             this.tail = null;
 
-        return oldHead.item;
+        return oldHead.data;
     }
 
     /**
-     * Remove and return the item from the end.
+     * Remove and return the data from the end.
      * <strong>Time complexity:</strong> O(1)<br>
      * 
-     * @return returns the last item
+     * @return returns the last data
      */
-    public Item removeLast() {
+    public T removeLast() {
         if (this.isEmpty())
             throw new NoSuchElementException();
 
-        DoublyLinkedNode oldTail = this.tail;
+        Node<T> oldTail = this.tail;
         this.tail = this.tail.prev;
 
         if (this.tail != null)
@@ -153,7 +141,7 @@ public class Deque<Item> implements Iterable<Item> {
         if (this.isEmpty())
             this.head = null;
 
-        return oldTail.item;
+        return oldTail.data;
     }
 
     /**
@@ -162,44 +150,7 @@ public class Deque<Item> implements Iterable<Item> {
      * @return returns a new instance
      */
     @Override
-    public Iterator<Item> iterator() {
-        return new LinkedListIterator();
-    }
-
-    /**
-     * Implements an Iterator for a LinkedList data type.
-     * <strong>Time complexity:</strong> O(n)<br>
-     * 
-     * @author marioluan
-     */
-    private class LinkedListIterator implements Iterator<Item> {
-        private DoublyLinkedNode current;
-
-        /**
-         * Constructs the iterator by pointing its cursor to the head.
-         */
-        public LinkedListIterator() {
-            this.current = head;
-        }
-
-        public boolean hasNext() {
-            return this.current != null;
-        }
-
-        public void remove() {
-            throw new UnsupportedOperationException();
-        }
-
-        public Item next() {
-            if (!hasNext())
-                throw new NoSuchElementException();
-
-            Item oldItem = this.current.item;
-
-            // moves the cursor
-            this.current = this.current.next;
-
-            return oldItem;
-        }
+    public Iterator<T> iterator() {
+        return new LinkedListIterator<T>(this.head);
     }
 }
