@@ -9,10 +9,27 @@ package io.github.marioluan.datastructures;
  *            the class type of the data being handled
  */
 public class Node<T extends Comparable<T>> implements Comparable<Node<T>> {
-    public T       data;
+
+    /**
+     * The value of the node.
+     */
+    public T data;
+
+    /**
+     * A link to the next node.
+     */
     public Node<T> next;
+
+    /**
+     * A link to the previous node.
+     */
     public Node<T> prev;
 
+    /**
+     * Construct a new node with the given data.
+     * 
+     * @param data
+     */
     public Node(T data) {
         this.data = data;
     }
@@ -42,4 +59,5 @@ public class Node<T extends Comparable<T>> implements Comparable<Node<T>> {
     public boolean hasPrev() {
         return this.prev != null;
     }
+
 }
