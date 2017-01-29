@@ -5,7 +5,7 @@ package io.github.marioluan.datastructures;
  * 
  * @author marioluan
  */
-public abstract class Util {
+public final class Util {
 
     /**
      * Check whether {@link Comparable a} is lesser than {@link Comparable b}.
