@@ -82,7 +82,7 @@ public class MinUnorderedLinkedListPriorityQueue<T extends Comparable<T>>
             cursor = cursor.next;
         }
 
-        if (min.prev != null)
+        if (min.hasPrev())
             min.prev.next = min.next;
 
         this.size--;
