@@ -1,11 +1,14 @@
 package io.github.marioluan.datastructures;
 
 /**
- * Abstract layer with helper methods for data structures' implementations.
+ * Utility with static methods to be used by data structures implementations.
  * 
  * @author marioluan
  */
 public final class Util {
+
+    private Util() {
+    }
 
     /**
      * Check whether {@link Comparable a} is lesser than {@link Comparable b}.
