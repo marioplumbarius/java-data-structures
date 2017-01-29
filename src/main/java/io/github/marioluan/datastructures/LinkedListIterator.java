@@ -21,14 +21,25 @@ public class LinkedListIterator<T extends Comparable<T>>
         this.cursor = head;
     }
 
+    /**
+     * {@inheritDoc}
+     */
     public boolean hasNext() {
         return this.cursor != null;
     }
 
+    /**
+     * Operation not permitted.
+     * 
+     * @throws UnsupportedOperationException
+     */
     public void remove() {
         throw new UnsupportedOperationException();
     }
 
+    /**
+     * {@inheritDoc}
+     */
     public T next() {
         if (!hasNext())
             throw new NoSuchElementException();
