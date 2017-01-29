@@ -62,7 +62,7 @@ public class Deque<T extends Comparable<T>> implements Iterable<T> {
         if (oldHead != null)
             oldHead.prev = this.head;
 
-        // when the deque is empty, head == tail
+        // when the dequeue is empty, head == tail
         if (this.isEmpty())
             this.tail = this.head;
 
@@ -112,7 +112,7 @@ public class Deque<T extends Comparable<T>> implements Iterable<T> {
 
         this.size--;
 
-        // when the deque becomes empty, head == tail
+        // when the dequeue becomes empty, head == tail
         if (this.isEmpty())
             this.tail = null;
 
@@ -137,7 +137,7 @@ public class Deque<T extends Comparable<T>> implements Iterable<T> {
 
         this.size--;
 
-        // when the deque becomes empty, head == tail
+        // when the dequeue becomes empty, head == tail
         if (this.isEmpty())
             this.head = null;
 
