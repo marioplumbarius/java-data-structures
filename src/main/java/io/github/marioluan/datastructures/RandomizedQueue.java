@@ -7,8 +7,7 @@ import edu.princeton.cs.algs4.StdRandom;
 import io.github.marioluan.datastructures.wrappers.Resizable;
 
 /**
- * Randomized implementation of a queue data type.<br>
- * Each iterator maintains its own random order.
+ * Randomized queue implementation using an array.
  * 
  * @author marioluan
  * @param <T>
@@ -124,7 +123,7 @@ public class RandomizedQueue<T> implements Iterable<T> {
     }
 
     /**
-     * Implements an Iterator for a {@code RandomizedQueue} data type.
+     * Implements an Iterator for a {@code RandomizedQueue} data structure.
      * 
      * @author marioluan
      */
