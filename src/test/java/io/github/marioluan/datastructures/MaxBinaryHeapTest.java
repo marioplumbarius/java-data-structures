@@ -31,7 +31,7 @@ public class MaxBinaryHeapTest {
     private MaxBinaryHeap<Integer> subject;
 
     {
-        describe("MinOrderedLinkedListPriorityQueue", () -> {
+        describe("MaxBinaryHeap", () -> {
             beforeEach(() -> {
                 this.subject = new MaxBinaryHeap<>(10);
             });
