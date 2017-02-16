@@ -1,9 +1,11 @@
 package io.github.marioluan.datastructures.symboltable;
 
 import edu.princeton.cs.algs4.Queue;
+import edu.princeton.cs.algs4.Stack;
 
 /**
- * {@link SymbolTable} implementation using a binary search tree data structure.<br>
+ * {@link SymbolTable} implementation using a binary search tree data
+ * structure.<br>
  * The following operations take O(h) on average, where h == height of tree (its
  * proportional to O(log N) if keys are inserted in random order):
  * <ul>
@@ -324,14 +326,52 @@ public class BinarySearchTree<Key extends Comparable<Key>, Value>
 
     @Override
     public Iterable<Key> keys() {
-        // TODO
         return keys(min(), max());
     }
 
     @Override
     public Iterable<Key> keys(Key lo, Key hi) {
-        // TODO
-        return null;
+        Stack<Node> stack = new Stack<>();
+        Queue<Key> keys = new Queue<>();
+        Node cursor = root;
+
+        // empty tree
+        if (isEmpty())
+            return keys;
+
+        while (true) {
+
+            // (1) adds all nodes from left subtree which are greater or equal
+            // to lo
+            if (cursor != null) {
+                stack.push(cursor);
+
+                if (cursor.key.compareTo(lo) >= 0)
+                    cursor = cursor.left;
+                else
+                    cursor = null;
+
+            } else {
+                // all nodes got visited
+                if (stack.isEmpty())
+                    break;
+
+                // (2) fetches the node from the stack which is already in
+                // natural order
+                cursor = stack.pop();
+
+                // (3) adds eligible keys (between lo..hi)
+                if (cursor.key.compareTo(lo) >= 0
+                        && cursor.key.compareTo(hi) <= 0)
+                    keys.enqueue(cursor.key);
+
+                // (4) adds its right subtree to the stack and go back to step
+                // (1) if subtree is not null
+                cursor = cursor.right;
+            }
+        }
+
+        return keys;
     }
 
     @Override

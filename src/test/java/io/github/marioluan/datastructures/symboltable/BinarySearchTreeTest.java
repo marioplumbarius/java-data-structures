@@ -550,7 +550,7 @@ public class BinarySearchTreeTest {
                 });
             });
 
-            xdescribe("#keys", () -> {
+            describe("#keys", () -> {
                 describe("when table is empty", () -> {
                     it("returns an empty iterator", () -> {
                         assertNotNull(subject.keys());
@@ -576,7 +576,7 @@ public class BinarySearchTreeTest {
                 });
             });
 
-            xdescribe("#keys(lo, hi)", () -> {
+            describe("#keys(lo, hi)", () -> {
                 describe("when table is empty", () -> {
                     it("returns an empty iterator", () -> {
                         assertNotNull(subject.keys(key, key));
