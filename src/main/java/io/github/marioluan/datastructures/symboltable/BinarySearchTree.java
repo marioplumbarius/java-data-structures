@@ -84,6 +84,11 @@ public class BinarySearchTree<Key extends Comparable<Key>, Value>
             parent.right = newNode;
     }
 
+    // Balancing problem with this approach and why Red-Black tress are better
+    // balanced:
+    // Each BST contains 150 nodes. We then repeatedly delete (via Hibbard
+    // deletion) and insert keys at random. The BST becomes skewed toward the
+    // left.
     @Override
     public void delete(Key key) {
         if (key == null)
@@ -296,11 +301,10 @@ public class BinarySearchTree<Key extends Comparable<Key>, Value>
     }
 
     /**
-     * Wrapper which computes the size of the {@link Node cursor} by counting
-     * the number of children nodes.
+     * Wrapper for {@link size} method.
      * 
      * @param cursor
-     * @return the size of the cursor tree
+     * @return the number of key-value pairs in the cursor tree
      */
     private int size(Node cursor) {
         if (cursor == null)
@@ -383,8 +387,7 @@ public class BinarySearchTree<Key extends Comparable<Key>, Value>
     }
 
     /**
-     * Wrapper which returns the node with the smallest key from the {@link Node
-     * cursor} tree.
+     * Wrapper for {@link #min} method.
      * 
      * @param cursor
      * @return the node with the smallest key from the tree of the cursor
@@ -405,8 +408,7 @@ public class BinarySearchTree<Key extends Comparable<Key>, Value>
     }
 
     /**
-     * Wrapper which returns the node with the largest key from the {@link Node
-     * cursor} tree.
+     * Wrapper for {@link #max} method.
      * 
      * @param cursor
      * @return the node with the largest key from the tree of the cursor
