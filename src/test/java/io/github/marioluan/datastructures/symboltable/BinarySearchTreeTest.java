@@ -423,7 +423,10 @@ public class BinarySearchTreeTest {
                             });
 
                             it("removes the key from table", () -> {
+                                assertTrue(this.subject.contains("S"));
                                 assertFalse(this.subject.contains("X"));
+                                assertTrue(this.subject.contains("E"));
+                                assertTrue(this.subject.contains("R"));
                             });
 
                             it("decrements size by 1", () -> {
@@ -444,7 +447,12 @@ public class BinarySearchTreeTest {
                             });
 
                             it("removes the key from table", () -> {
+                                assertTrue(this.subject.contains("S"));
+                                assertTrue(this.subject.contains("X"));
+                                assertTrue(this.subject.contains("E"));
+                                assertTrue(this.subject.contains("R"));
                                 assertFalse(this.subject.contains("C"));
+                                assertTrue(this.subject.contains("A"));
                             });
 
                             it("decrements size by 1", () -> {
@@ -465,7 +473,12 @@ public class BinarySearchTreeTest {
                             });
 
                             it("removes the key from table", () -> {
+                                assertTrue(this.subject.contains("S"));
+                                assertTrue(this.subject.contains("X"));
+                                assertTrue(this.subject.contains("E"));
+                                assertTrue(this.subject.contains("R"));
                                 assertFalse(this.subject.contains("C"));
+                                assertTrue(this.subject.contains("D"));
                             });
 
                             it("decrements size by 1", () -> {
@@ -476,24 +489,97 @@ public class BinarySearchTreeTest {
                         describe(
                                 "when it has both right and left subtrees without nested subtrees",
                                 () -> {
-                                    beforeEach(() -> {
-                                        this.subject.put("S", value);
-                                        this.subject.put("X", value);
-                                        this.subject.put("E", value);
-                                        this.subject.put("R", value);
-                                        this.subject.put("C", value);
-                                        this.subject.put("D", value);
-                                        this.subject.put("A", value);
+                                    describe("when it is not at the root",
+                                            () -> {
+                                                beforeEach(() -> {
+                                                    this.subject.put("S",
+                                                            value);
+                                                    this.subject.put("X",
+                                                            value);
+                                                    this.subject.put("E",
+                                                            value);
+                                                    this.subject.put("R",
+                                                            value);
+                                                    this.subject.put("C",
+                                                            value);
+                                                    this.subject.put("D",
+                                                            value);
+                                                    this.subject.put("A",
+                                                            value);
 
-                                        this.subject.delete("C");
-                                    });
+                                                    this.subject.delete("C");
+                                                });
 
-                                    it("removes the key from table", () -> {
-                                        assertFalse(this.subject.contains("C"));
-                                    });
+                                                it("removes the key from table",
+                                                        () -> {
+                                                            assertTrue(
+                                                                    this.subject
+                                                                            .contains(
+                                                                                    "S"));
+                                                            assertTrue(
+                                                                    this.subject
+                                                                            .contains(
+                                                                                    "X"));
+                                                            assertTrue(
+                                                                    this.subject
+                                                                            .contains(
+                                                                                    "R"));
+                                                            assertFalse(
+                                                                    this.subject
+                                                                            .contains(
+                                                                                    "C"));
+                                                            assertTrue(
+                                                                    this.subject
+                                                                            .contains(
+                                                                                    "D"));
+                                                            assertTrue(
+                                                                    this.subject
+                                                                            .contains(
+                                                                                    "A"));
+                                                        });
 
-                                    it("decrements size by 1", () -> {
-                                        assertEquals(6, this.subject.size());
+                                                it("decrements size by 1",
+                                                        () -> {
+                                                            assertEquals(6,
+                                                                    this.subject
+                                                                            .size());
+                                                        });
+                                            });
+
+                                    describe("when it is at the root", () -> {
+                                        beforeEach(() -> {
+                                            this.subject.put("S", value);
+                                            this.subject.put("X", value);
+                                            this.subject.put("E", value);
+                                            this.subject.put("R", value);
+                                            this.subject.put("C", value);
+                                            this.subject.put("D", value);
+                                            this.subject.put("A", value);
+
+                                            this.subject.delete("S");
+                                        });
+
+                                        it("removes the key from table", () -> {
+                                            assertFalse(
+                                                    this.subject.contains("S"));
+                                            assertTrue(
+                                                    this.subject.contains("X"));
+                                            assertTrue(
+                                                    this.subject.contains("E"));
+                                            assertTrue(
+                                                    this.subject.contains("R"));
+                                            assertTrue(
+                                                    this.subject.contains("C"));
+                                            assertTrue(
+                                                    this.subject.contains("D"));
+                                            assertTrue(
+                                                    this.subject.contains("A"));
+                                        });
+
+                                        it("decrements size by 1", () -> {
+                                            assertEquals(6,
+                                                    this.subject.size());
+                                        });
                                     });
                                 });
 
