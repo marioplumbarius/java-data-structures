@@ -38,8 +38,10 @@ gradle clean assemble
 -- [Unordered Linked List](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/symboltable/LinkedListSymbolTable.java)  
 -- [Ordered Array](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/symboltable/ArraySymbolTable.java)  
 -- [Binary Search Tree](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/symboltable/BinarySearchTree.java)  
--- [Interval Search Tree](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/symboltable/IntervalSearchTree.java) (TODO: unit tests)
--- [Separate Chaining Hash](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/symboltable/hash/SeparateChainingHash.java)
+-- [Interval Search Tree](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/symboltable/IntervalSearchTree.java) (TODO: unit tests)  
+-- [1D Range Count](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/symboltable/OneDRangeCount.java)  
+-- Hash Table  
+--- [Separate Chaining Hash](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/symboltable/hash/SeparateChainingHash.java)  
   
 
 ## References
