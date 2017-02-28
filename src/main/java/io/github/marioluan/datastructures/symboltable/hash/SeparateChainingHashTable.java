@@ -20,7 +20,7 @@ import io.github.marioluan.datastructures.symboltable.SymbolTable;
  * @param <Value>
  *            the class type of the value
  */
-public class SeparateChainingHash<Key extends Comparable<Key>, Value>
+public class SeparateChainingHashTable<Key extends Comparable<Key>, Value>
         implements SymbolTable<Key, Value> {
 
     private static final class Node {
@@ -48,7 +48,7 @@ public class SeparateChainingHash<Key extends Comparable<Key>, Value>
      * 
      * @param capacity
      */
-    public SeparateChainingHash(int capacity) {
+    public SeparateChainingHashTable(int capacity) {
         this.buckets = new Node[capacity + 1];
         this.n = 0;
         this.m = computeM();

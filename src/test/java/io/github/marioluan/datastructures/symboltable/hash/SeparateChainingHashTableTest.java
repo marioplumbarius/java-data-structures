@@ -15,17 +15,17 @@ import org.junit.runner.RunWith;
 import com.greghaskins.spectrum.Spectrum;
 
 @RunWith(Spectrum.class)
-public class SeparateChainingHashTest {
+public class SeparateChainingHashTableTest {
 
-    private SeparateChainingHash<String, Integer> subject;
+    private SeparateChainingHashTable<String, Integer> subject;
     private static final Random                   RANDOM = new Random();
     private String                                key;
     private Integer                               value;
 
     {
-        describe("SeparateChainingHash", () -> {
+        describe("SeparateChainingHashTable", () -> {
             beforeEach(() -> {
-                this.subject = new SeparateChainingHash<>(1);
+                this.subject = new SeparateChainingHashTable<>(1);
                 this.key = String.valueOf(RANDOM.nextInt(26 + 'a'));
                 this.value = RANDOM.nextInt();
             });
