@@ -165,7 +165,7 @@ public class RandomizedQueue<T> implements Iterable<T> {
         public boolean hasNext() {
             return this.m < nodes.length;
         }
-        
+
         public void remove() {
             throw new UnsupportedOperationException();
         }
