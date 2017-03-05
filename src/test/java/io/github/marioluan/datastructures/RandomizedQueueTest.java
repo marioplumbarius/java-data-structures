@@ -4,7 +4,6 @@ import static com.greghaskins.spectrum.Spectrum.afterEach;
 import static com.greghaskins.spectrum.Spectrum.beforeEach;
 import static com.greghaskins.spectrum.Spectrum.describe;
 import static com.greghaskins.spectrum.Spectrum.it;
-import static com.greghaskins.spectrum.Spectrum.xit;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
@@ -57,7 +56,7 @@ public class RandomizedQueueTest {
             });
 
             describe("constructor", () -> {
-                xit("initializes an empty randomized queue", () -> {
+                it("initializes an empty randomized queue", () -> {
                     assertTrue(this.subject.isEmpty());
                 });
             });
@@ -202,7 +201,7 @@ public class RandomizedQueueTest {
                         this.subject.enqueue(new Random().nextInt());
                     });
 
-                    xit("does not throw NoSuchElementException", () -> {
+                    it("does not throw NoSuchElementException", () -> {
                         NoSuchElementException throwed = null;
 
                         try {
@@ -214,7 +213,7 @@ public class RandomizedQueueTest {
                         assertNull(throwed);
                     });
 
-                    xit("decrements size by 1", () -> {
+                    it("decrements size by 1", () -> {
                         int current = this.subject.size();
                         this.subject.dequeue();
                         int expected = current - 1;
@@ -223,7 +222,15 @@ public class RandomizedQueueTest {
                     });
 
                     describe("when there are 1/4 of queue size items", () -> {
-                        xit("shrinks its size", () -> {
+                        it("shrinks its size", () -> {
+                            this.subject.enqueue(99999);
+                            this.subject.enqueue(99999);
+
+                            this.subject.dequeue();
+                            this.subject.dequeue();
+
+                            verify(this.rs, times(1)).resize(anyObject(), eq(1),
+                                    eq(2));
                         });
                     });
                 });
