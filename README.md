@@ -4,6 +4,7 @@ Data structures written in Java.
 [![Build Status](https://travis-ci.org/marioluan/java-data-structures.svg?branch=master)](https://travis-ci.org/marioluan/java-data-structures)
 [![Coverage Status](https://coveralls.io/repos/github/marioluan/java-data-structures/badge.svg?branch=master)](https://coveralls.io/github/marioluan/java-data-structures?branch=master)
 [![Dependency Status](https://www.versioneye.com/user/projects/5886d25de25f59003995104a/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/5886d25de25f59003995104a)
+[![codebeat badge](https://codebeat.co/badges/b3d65929-147a-4049-a356-42611a060b8d)](https://codebeat.co/projects/github-com-marioluan-java-data-structures)
 
 --
 
