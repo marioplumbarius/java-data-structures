@@ -39,5 +39,5 @@ dependencies {
 
     // cobertura plugin dependency
     // see: https://github.com/stevesaliman/gradle-cobertura-plugin/blob/master/usage.md
-    testRuntime 'org.slf4j:slf4j-api:1.7.23'
+    testRuntime 'org.slf4j:slf4j-api:1.7.24'
 }
