@@ -15,9 +15,11 @@ import io.github.marioluan.datastructures.Util;
 public class ArraySymbolTable<Key extends Comparable<Key>, Value>
         implements SymbolTable<Key, Value> {
 
-    private Key[]   keys;
-    private Value[] values;
-    private int     n;
+    private Key[]            keys;
+    private Value[]          values;
+    private int              n;
+    private static final int FOUR_TIMES = 4;
+    private static final int TWICE      = 2;
 
     /**
      * Constructs an empty ordered array.
@@ -51,8 +53,8 @@ public class ArraySymbolTable<Key extends Comparable<Key>, Value>
                 values[n - 1] = null;
                 n--;
                 // shrink size of array if necessary
-                if (n > 0 && n == keys.length / 4)
-                    resize(keys.length / 2);
+                if (n > 0 && n == keys.length / FOUR_TIMES)
+                    resize(keys.length / TWICE);
             }
 
             return;
@@ -60,7 +62,7 @@ public class ArraySymbolTable<Key extends Comparable<Key>, Value>
 
         // double size of array if necessary
         if (n == keys.length)
-            resize(2 * keys.length);
+            resize(TWICE * keys.length);
 
         // inserts a new key-value pair
         keys[n] = key;
