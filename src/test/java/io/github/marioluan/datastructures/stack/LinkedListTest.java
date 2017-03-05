@@ -7,7 +7,6 @@ import static com.greghaskins.spectrum.Spectrum.describe;
 import static com.greghaskins.spectrum.Spectrum.beforeEach;
 import static com.greghaskins.spectrum.Spectrum.afterEach;
 import static com.greghaskins.spectrum.Spectrum.it;
-import static com.greghaskins.spectrum.Spectrum.xdescribe;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotEquals;
@@ -25,7 +24,7 @@ public class LinkedListTest {
     private Stack<Integer> subject;
 
     {
-        describe("LinkedListTest", () -> {
+        describe("LinkedList", () -> {
             beforeEach(() -> {
                 this.subject = new LinkedList<>();
             });
@@ -266,8 +265,45 @@ public class LinkedListTest {
                 });
             });
 
-            xdescribe("#iterator", () -> {
+            describe("#iterator", () -> {
+                describe("when the stack is empty", () -> {
+                    it("returns an empty iterator", () -> {
+                        assertFalse(this.subject.iterator().hasNext());
+                    });
+                });
 
+                describe("when the stack is not empty", () -> {
+                    it("does not return an empty iterator", () -> {
+                        this.subject.push(new Random().nextInt());
+
+                        assertTrue(this.subject.iterator().hasNext());
+                    });
+
+                    it("returns the items in LIFO order", () -> {
+                        int n = 5;
+
+                        for (int i = 1; i <= n; i++)
+                            this.subject.push(i);
+
+                        for (Integer item : this.subject)
+                            assertEquals(n--, (int) item);
+
+                    });
+
+                    it("makes a copy of the items from the stack", () -> {
+                        int n = 5;
+
+                        for (int i = 1; i <= n; i++)
+                            this.subject.push(i);
+
+                        for (int i = 0; i < 2; i++) {
+                            for (Integer item : this.subject)
+                                assertEquals(n--, (int) item);
+
+                            n = 5;
+                        }
+                    });
+                });
             });
         });
     }

@@ -12,7 +12,7 @@ import java.util.NoSuchElementException;
  * @param <T>
  *            the generic type of items from the stack
  */
-public class LinkedList<T> implements Stack<T>, Iterable<T> {
+public class LinkedList<T> implements Stack<T> {
 
     private final class Node {
         private T    data;
@@ -76,12 +76,16 @@ public class LinkedList<T> implements Stack<T>, Iterable<T> {
 
     @Override
     public Iterator<T> iterator() {
-        return new LinkedListIterator();
+        return new LinkedListIterator(head);
     }
 
-    private class LinkedListIterator implements Iterator<T> {
+    private final class LinkedListIterator implements Iterator<T> {
 
-        private Node cursor = head;
+        private Node cursor;
+
+        public LinkedListIterator(Node cursor) {
+            this.cursor = cursor;
+        }
 
         @Override
         public boolean hasNext() {

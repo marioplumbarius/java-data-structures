@@ -9,7 +9,7 @@ import java.util.NoSuchElementException;
  * @param <T>
  *            the generic type of items from the stack
  */
-public interface Stack<T> {
+public interface Stack<T> extends Iterable<T> {
 
     /**
      * Checks whether the stack is empty.
