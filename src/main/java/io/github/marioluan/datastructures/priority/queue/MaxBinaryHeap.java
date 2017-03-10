@@ -1,7 +1,9 @@
-package io.github.marioluan.datastructures;
+package io.github.marioluan.datastructures.priority.queue;
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;
+
+import io.github.marioluan.datastructures.Util;
 
 /**
  * Complete binary tree implementation using a max-heap data structure.<br>

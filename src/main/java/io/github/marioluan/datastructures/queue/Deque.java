@@ -1,7 +1,10 @@
-package io.github.marioluan.datastructures;
+package io.github.marioluan.datastructures.queue;
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;
+
+import io.github.marioluan.datastructures.priority.queue.LinkedListIterator;
+import io.github.marioluan.datastructures.priority.queue.Node;
 
 /**
  * Double-ended queue implementation using a doubly linked list data

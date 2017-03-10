@@ -1,4 +1,4 @@
-package io.github.marioluan.datastructures;
+package io.github.marioluan.datastructures.queue;
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;

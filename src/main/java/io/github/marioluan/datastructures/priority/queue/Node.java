@@ -1,4 +1,4 @@
-package io.github.marioluan.datastructures;
+package io.github.marioluan.datastructures.priority.queue;
 
 /**
  * Implementation of a node data structure with a link to its next and previous

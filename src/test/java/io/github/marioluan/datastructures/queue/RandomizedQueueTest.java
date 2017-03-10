@@ -1,4 +1,4 @@
-package io.github.marioluan.datastructures;
+package io.github.marioluan.datastructures.queue;
 
 import static com.greghaskins.spectrum.Spectrum.afterEach;
 import static com.greghaskins.spectrum.Spectrum.beforeEach;
