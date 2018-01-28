@@ -33,7 +33,7 @@ public class BinarySearchTree<Key extends Comparable<Key>, Value>
         private Node  left;
         private Node  right;
 
-        public Node(Key key, Value value) {
+        Node(Key key, Value value) {
             this.key = key;
             this.value = value;
         }

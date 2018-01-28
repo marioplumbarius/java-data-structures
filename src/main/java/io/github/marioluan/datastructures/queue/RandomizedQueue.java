@@ -135,7 +135,7 @@ public class RandomizedQueue<T> implements Iterable<T> {
          * Construct the iterator by copying and shuffling the array.
          * <strong>Time complexity:</strong> O(n^2).<br>
          */
-        public RandomQueueIterator() {
+        RandomQueueIterator() {
             nodes = copy(a);
             StdRandom.shuffle(nodes);
             m = 0;

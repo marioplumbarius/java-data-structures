@@ -178,7 +178,7 @@ public class MaxBinaryHeap<Key> implements Iterable<Key> {
          * in order, so we do not need to rearrange keys.
          */
         @SuppressWarnings({ "rawtypes", "unchecked" })
-        public BinaryHeapIterator() {
+        BinaryHeapIterator() {
             this.copyHeap = new MaxBinaryHeap(size());
             Util.copy(keys, this.copyHeap.keys, 0, size());
         }

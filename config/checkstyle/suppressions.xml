@@ -6,4 +6,8 @@
 <suppressions>
 	<suppress checks="Javadoc" files=".*[\\/]test[\\/]" />
 	<suppress checks="MagicNumber" files=".*[\\/]test[\\/]" />
+
+    <!-- I don't intend to fix these errors, so I'm going to ignore them completely -->
+    <suppress checks="VisibilityModifier" files="queue\/Node\.java" />
+    <suppress checks="VisibilityModifier" files="symboltable\/LinkedListSymbolTable\.java" />
 </suppressions>

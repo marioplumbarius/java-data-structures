@@ -83,7 +83,7 @@ public class LinkedList<T> implements Stack<T> {
 
         private Node cursor;
 
-        public LinkedListIterator(Node cursor) {
+        LinkedListIterator(Node cursor) {
             this.cursor = cursor;
         }
 

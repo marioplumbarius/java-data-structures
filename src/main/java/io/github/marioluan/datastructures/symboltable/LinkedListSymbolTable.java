@@ -22,7 +22,7 @@ public class LinkedListSymbolTable<Key extends Comparable<Key>, Value>
         public Node<Key, Value> next;
         public Node<Key, Value> prev;
 
-        public Node(Key key, Value value) {
+        Node(Key key, Value value) {
             this.key = key;
             this.value = value;
         }
