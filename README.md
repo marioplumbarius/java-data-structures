@@ -17,7 +17,7 @@ Import the files [code-style.xml](code-style.xml) and [formatter.xml](formatter.
 
 ## Test
 ```bash
-gradle clean coberturaCheck check
+gradle clean cobertura check
 # Test summary will be located at `build/reports/tests/test/index.html`
 # Coverage report will be located at `build/reports/cobertura/index.html`.
 # Code style issues report will be located at `build/reports/checkstyle/main.html`
