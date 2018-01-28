@@ -3,7 +3,7 @@ plugins {
     id 'eclipse'
     id 'java'
     id 'com.github.kt3k.coveralls' version '2.7.1'
-    id 'net.saliman.cobertura' version '2.4.0'
+    id 'net.saliman.cobertura' version '2.5.3'
 }
 
 cobertura.coverageFormats = ['html', 'xml'] // coveralls plugin depends on xml format repor
