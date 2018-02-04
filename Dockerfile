@@ -1,7 +1,19 @@
-FROM gradle:4.5.0-jdk8-alpine
+FROM kdelfour/cloud9-docker
 
-ENV USER gradle
-ENV APP_PATH /home/gradle/java-data-structures
+# sh becomes bash
+RUN ln -sf /bin/bash /bin/sh
 
-RUN mkdir $APP_PATH \
-  && chown $USER $APP_PATH
+# gradle
+RUN apt-get update && apt-get install -y --no-install-recommends unzip zip \
+  && curl -s https://get.sdkman.io | bash \
+  && source /root/.sdkman/bin/sdkman-init.sh \
+  && sdk install gradle
+
+# java-8
+RUN apt-get install -y --no-install-recommends software-properties-common python-software-properties \
+  && add-apt-repository ppa:openjdk-r/ppa -y \
+  && apt-get update -y \
+  && apt-get install openjdk-8-jdk -y --no-install-recommends \
+  && update-alternatives --config java \
+  && update-alternatives --config javac \
+  && java -version

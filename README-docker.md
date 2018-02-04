@@ -1,15 +1,10 @@
-# README-docker.md
+# README-docker-cloud9.md
 
 **Pre-requisites:**
 - docker (17.12.0-ce)
 - docker-compose (1.18.0)
 
-## Test
+## Start Cloud9 IDE
 ```bash
-docker-compose run gradle gradle clean cobertura check
-```
-
-## Build
-```bash
-docker-compose run gradle gradle clean assemble
+docker-compose up
 ```

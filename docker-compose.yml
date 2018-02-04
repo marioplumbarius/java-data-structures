@@ -1,14 +1,9 @@
 version: '3'
 services:
-  gradle:
+  cloud9:
     build: .
-    working_dir: $APP_PATH
     volumes:
-      - ./config:$APP_PATH/config
-      - ./src:$APP_PATH/src
-      - ./build.gradle:$APP_PATH/build.gradle
-      - ./settings.gradle:$APP_PATH/settings.gradle
-      - gradle_cache:/home/gradle/.gradle
-    command: gradle --help
-volumes:
-  gradle_cache:
+      - /workplace/mariodes/github/java-data-structures/:/workspace/java-data-structures/
+    ports:
+      - 80:80
+      - 3000:3000
