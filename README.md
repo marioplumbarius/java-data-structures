@@ -7,13 +7,17 @@ Data structures written in Java.
 [![codebeat badge](https://codebeat.co/badges/b3d65929-147a-4049-a356-42611a060b8d)](https://codebeat.co/projects/github-com-marioluan-java-data-structures)
 
 **Pre-requisites:**
-- java (v1.8)
-- gradle (v3.3)
+- docker (17.12.0-ce)
+- docker-compose (1.18.0)
 
-## Code style & formatter (eclipse users only)
-Import the files [code-style.xml](code-style.xml) and [formatter.xml](formatter.xml) into your IDE.
+## Start Cloud9 IDE
+```bash
+docker-compose up
+# Head over http://localhost to open the IDE.
+```
 
-## Test
+## Inside the container
+### Test
 ```bash
 gradle clean cobertura check
 # Test summary will be located at `build/reports/tests/test/index.html`
@@ -21,7 +25,7 @@ gradle clean cobertura check
 # Code style issues report will be located at `build/reports/checkstyle/main.html`
 ```
 
-## Build
+### Build
 ```bash
 gradle clean assemble
 ```

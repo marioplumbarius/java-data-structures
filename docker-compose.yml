@@ -4,6 +4,9 @@ services:
     build: .
     volumes:
       - /workplace/mariodes/github/java-data-structures/:/workspace/java-data-structures/
+      - gradle_cache:/workspace/java-data-structures/.gradle
     ports:
       - 80:80
       - 3000:3000
+volumes:
+  gradle_cache:
