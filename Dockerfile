@@ -1,19 +1,15 @@
-FROM kdelfour/cloud9-docker
+FROM java:openjdk-8-alpine
 
-# sh becomes bash
-RUN ln -sf /bin/bash /bin/sh
+# ttf-dejavu is required to render GUI under X11: https://github.com/docker-library/openjdk/issues/73
+# tar update so `strip-components` work
+# openssl so it work under https
+# wget so it does not receive TCP RST
+ENV PKGS openssl tar ttf-dejavu wget
+RUN apk --update add --no-cache $PKGS
 
-# gradle
-RUN apt-get update && apt-get install -y --no-install-recommends unzip zip \
-  && curl -s https://get.sdkman.io | bash \
-  && source /root/.sdkman/bin/sdkman-init.sh \
-  && sdk install gradle
-
-# java-8
-RUN apt-get install -y --no-install-recommends software-properties-common python-software-properties \
-  && add-apt-repository ppa:openjdk-r/ppa -y \
-  && apt-get update -y \
-  && apt-get install openjdk-8-jdk -y --no-install-recommends \
-  && update-alternatives --config java \
-  && update-alternatives --config javac \
-  && java -version
+# install intellij
+# COPY ./ideaIC-2017.3.4.tar.gz /tmp/idea.tar.gz
+RUN wget -O /tmp/idea.tar.gz https://download-cf.jetbrains.com/idea/ideaIC-2017.3.4.tar.gz \
+    && mkdir -p /usr/share/intellij \
+    && tar -xf /tmp/idea.tar.gz --strip-components=1 -C /usr/share/intellij \
+    && rm /tmp/idea.tar.gz

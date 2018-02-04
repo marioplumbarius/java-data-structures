@@ -9,15 +9,19 @@ Data structures written in Java.
 **Pre-requisites:**
 - docker (17.12.0-ce)
 - docker-compose (1.18.0)
+- XQuartz (Mac OS X users only)
 
-## Start Cloud9 IDE
+**1. Mac OS X users**
 ```bash
-docker-compose up
-# Head over http://localhost to open the IDE.
+./mac_docker_compose.sh up
 ```
 
-## Inside the container
-### Test
+**2. Non Mac OS X users**
+```bash
+DISPLAY=$DISPLAY docker-compose up
+```
+
+## Test
 ```bash
 gradle clean cobertura check
 # Test summary will be located at `build/reports/tests/test/index.html`
@@ -25,7 +29,7 @@ gradle clean cobertura check
 # Code style issues report will be located at `build/reports/checkstyle/main.html`
 ```
 
-### Build
+## Build
 ```bash
 gradle clean assemble
 ```

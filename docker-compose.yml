@@ -1,12 +1,18 @@
 version: '3'
 services:
-  cloud9:
+  intellij:
     build: .
+    environment:
+      - DISPLAY=$DISPLAY
     volumes:
-      - /workplace/mariodes/github/java-data-structures/:/workspace/java-data-structures/
-      - gradle_cache:/workspace/java-data-structures/.gradle
-    ports:
-      - 80:80
-      - 3000:3000
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - $APP_ROOT:$APP_ROOT
+      - gradle_cache:$APP_ROOT/.gradle
+      - idea_cache:/root/.IdeaIC2017.3
+      - java_cache:/root/.java
+    working_dir: $APP_ROOT
+    command: /usr/share/intellij/bin/idea.sh
 volumes:
   gradle_cache:
+  idea_cache:
+  java_cache:

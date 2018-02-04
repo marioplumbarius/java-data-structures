@@ -20,3 +20,6 @@ bin/
 /.gradle/
 /build/
 repos
+.idea
+*.iml
+gradle*
