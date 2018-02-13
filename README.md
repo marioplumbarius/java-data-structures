@@ -9,7 +9,7 @@ Data structures written in Java.
 **Pre-requisites:**
 - docker (17.12.0-ce)
 - docker-compose (1.18.0)
-- XQuartz (Mac OS X users only)
+- X11 (X Window System)
 
 **1. Mac OS X users**
 ```bash
