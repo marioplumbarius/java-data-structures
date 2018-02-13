@@ -11,12 +11,7 @@ Data structures written in Java.
 - docker-compose (1.18.0)
 - X11 (X Window System)
 
-**1. Mac OS X users**
-```bash
-./mac_docker_compose.sh up
-```
-
-**2. Non Mac OS X users**
+## Start IDE
 ```bash
 DISPLAY=$DISPLAY docker-compose up
 ```
