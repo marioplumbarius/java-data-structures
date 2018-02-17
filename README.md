@@ -51,6 +51,8 @@ gradle clean assemble
   - Hash Table
     - [Separate Chaining Hash Table](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/symboltable/hash/SeparateChainingHashTable.java)
     - [Linear Probing Hash Table](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/symboltable/hash/LinearProbingHashTable.java)
+- Graph
+   - [Adjacency List Graph](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/graph/AdjacencyListGraph.java)
 
 ## References
 - [https://www.coursera.org/learn/algorithms-part1](https://www.coursera.org/learn/algorithms-part1)
