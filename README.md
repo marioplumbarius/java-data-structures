@@ -7,26 +7,21 @@ Data structures written in Java.
 [![codebeat badge](https://codebeat.co/badges/b3d65929-147a-4049-a356-42611a060b8d)](https://codebeat.co/projects/github-com-marioluan-java-data-structures)
 
 **Pre-requisites:**
-- docker (17.12.0-ce)
-- docker-compose (1.18.0)
+- docker (17.12.0-ce, build c97c6d6)
+- docker-compose (1.19.0)
 - X11 (X Window System)
 
-## Start IDE
+## Start IntelliJ IDE
 ```bash
-DISPLAY=$DISPLAY docker-compose up
+DISPLAY=$DISPLAY docker-compose run intellij /usr/share/intellij/bin/idea.sh
 ```
 
 ## Test
 ```bash
-gradle clean cobertura check
+docker-compose run gradle gradle clean test check
 # Test summary will be located at `build/reports/tests/test/index.html`
-# Coverage report will be located at `build/reports/cobertura/index.html`.
+# Coverage report will be located at `build/reports/jacoco/test/html/index.html`
 # Code style issues report will be located at `build/reports/checkstyle/main.html`
-```
-
-## Build
-```bash
-gradle clean assemble
 ```
 
 ## Available data structures
