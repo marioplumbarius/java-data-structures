@@ -33,6 +33,8 @@ gradle clean assemble
 - Stack
   - [Linked List](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/stack/LinkedList.java)
   - [Dynamic Array](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/stack/DynamicArray.java)
+- Multiset
+  - [Bag](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/multiset/Bag.java)
 - Queue
   - [Deque](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/queue/Deque.java)
   - [Randomized Queue](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/queue/RandomizedQueue.java)
@@ -52,3 +54,4 @@ gradle clean assemble
 
 ## References
 - [https://www.coursera.org/learn/algorithms-part1](https://www.coursera.org/learn/algorithms-part1)
+- [https://www.coursera.org/learn/algorithms-part2](https://www.coursera.org/learn/algorithms-part2)
