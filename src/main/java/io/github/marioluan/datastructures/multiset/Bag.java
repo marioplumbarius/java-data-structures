@@ -1,7 +1,7 @@
 package io.github.marioluan.datastructures.multiset;
 
 import io.github.marioluan.datastructures.priority.queue.LinkedListIterator;
-import io.github.marioluan.datastructures.priority.queue.Node;
+import io.github.marioluan.datastructures.Node;
 
 import java.util.Iterator;
 

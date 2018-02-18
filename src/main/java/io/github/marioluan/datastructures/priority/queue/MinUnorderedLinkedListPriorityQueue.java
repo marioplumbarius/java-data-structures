@@ -3,6 +3,7 @@ package io.github.marioluan.datastructures.priority.queue;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
+import io.github.marioluan.datastructures.Node;
 import io.github.marioluan.datastructures.Util;
 
 /**
