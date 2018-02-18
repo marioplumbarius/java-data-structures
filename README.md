@@ -9,12 +9,6 @@ Data structures written in Java.
 **Pre-requisites:**
 - docker (17.12.0-ce, build c97c6d6)
 - docker-compose (1.19.0)
-- X11 (X Window System)
-
-## Start IntelliJ IDE
-```bash
-DISPLAY=$DISPLAY docker-compose run intellij /usr/share/intellij/bin/idea.sh
-```
 
 ## Test
 ```bash
@@ -23,6 +17,9 @@ docker-compose run gradle gradle clean test check
 # Coverage report will be located at `build/reports/jacoco/test/html/index.html`
 # Code style issues report will be located at `build/reports/checkstyle/main.html`
 ```
+
+## How to contribute
+Head over [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Available data structures
 - Stack
