@@ -26,28 +26,30 @@ docker-compose run gradle gradle clean test check
 
 ## Available data structures
 - Stack
-  - [Linked List](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/stack/LinkedList.java)
-  - [Dynamic Array](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/stack/DynamicArray.java)
-- Multiset
-  - [Bag](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/multiset/Bag.java)
+    - [Linked List](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/stack/LinkedList.java)
+    - [Dynamic Array](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/stack/DynamicArray.java)
+    - Multiset
+        - [Bag](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/multiset/Bag.java)
 - Queue
-  - [Deque](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/queue/Deque.java)
-  - [Randomized Queue](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/queue/RandomizedQueue.java)
+    - [Deque](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/queue/Deque.java)
+    - [Randomized Queue](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/queue/RandomizedQueue.java)
 - Priority Queue
-  - [Ordered Linked List](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/priority/queue/MinOrderedLinkedListPriorityQueue.java)
-  - [Unordered Linked List](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/priority/queue/MinUnorderedLinkedListPriorityQueue.java)
-  - [MaxBinaryHeap](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/priority/queue/MaxBinaryHeap.java)
+    - [Ordered Linked List](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/priority/queue/MinOrderedLinkedListPriorityQueue.java)
+    - [Unordered Linked List](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/priority/queue/MinUnorderedLinkedListPriorityQueue.java)
+    - [MaxBinaryHeap](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/priority/queue/MaxBinaryHeap.java)
 - Symbol Table
-  - [Unordered Linked List](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/symboltable/LinkedListSymbolTable.java)
-  - [Ordered Array](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/symboltable/ArraySymbolTable.java)
-  - [Binary Search Tree](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/symboltable/BinarySearchTree.java)
-  - [Interval Search Tree](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/symboltable/IntervalSearchTree.java) (TODO: unit tests)
-  - [1D Range Count](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/symboltable/OneDRangeCount.java)
-  - Hash Table
-    - [Separate Chaining Hash Table](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/symboltable/hash/SeparateChainingHashTable.java)
-    - [Linear Probing Hash Table](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/symboltable/hash/LinearProbingHashTable.java)
+    - [Unordered Linked List](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/symboltable/LinkedListSymbolTable.java)
+    - [Ordered Array](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/symboltable/ArraySymbolTable.java)
+    - [Binary Search Tree](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/symboltable/BinarySearchTree.java)
+    - [Interval Search Tree](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/symboltable/IntervalSearchTree.java) (TODO: unit tests)
+    - [1D Range Count](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/symboltable/OneDRangeCount.java)
+    - Hash Table
+        - [Separate Chaining Hash Table](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/symboltable/hash/SeparateChainingHashTable.java)
+        - [Linear Probing Hash Table](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/symboltable/hash/LinearProbingHashTable.java)
 - Graph
-   - [Adjacency List Graph](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/graph/AdjacencyListGraph.java)
+    - [Adjacency List Graph](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/graph/AdjacencyListGraph.java)
+    - Search Algorithms
+        - [Depth-First Search](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/graph/DepthFirstSearch.java)
 
 ## References
 - [https://www.coursera.org/learn/algorithms-part1](https://www.coursera.org/learn/algorithms-part1)

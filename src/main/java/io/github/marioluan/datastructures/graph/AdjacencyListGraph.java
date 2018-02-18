@@ -56,6 +56,6 @@ public class AdjacencyListGraph implements Graph {
     // TODO: implement me!
     @Override
     public String toString() {
-        return "";
+        return null;
     }
 }
