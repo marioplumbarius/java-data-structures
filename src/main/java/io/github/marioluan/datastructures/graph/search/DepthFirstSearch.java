@@ -6,11 +6,8 @@ import io.github.marioluan.datastructures.graph.Graph;
  * Depth-first search implementation. <br>
  * Goal: Find all vertices connected to s (and a corresponding path).
  */
-public class DepthFirstSearch {
+public class DepthFirstSearch extends Decorator {
     private final Graph graph;
-    private boolean[] marked;
-    private Integer[] edgeTo;
-    private final int s;
 
     /**
      * Performs a DFS.
@@ -20,7 +17,6 @@ public class DepthFirstSearch {
      */
     public DepthFirstSearch(Graph graph, int s) {
         this.graph = graph;
-        this.s = s;
         marked = new boolean[graph.V()];
         edgeTo = new Integer[graph.V()];
 
@@ -41,23 +37,5 @@ public class DepthFirstSearch {
             search(w);
             edgeTo[w] = v;
         }
-    }
-
-    /**
-     * Returns all edges found connecting source vertex to all possible destination vertices.
-     *
-     * @return edges found connecting source vertex to all possible destination vertices
-     */
-    public Integer[] getEdgeTo() {
-        return edgeTo;
-    }
-
-    /**
-     * Returns the list of marked (and unmarked) vertices.
-     *
-     * @return the list of marked (and unmarked) vertices
-     */
-    public boolean[] getMarked() {
-        return marked;
     }
 }

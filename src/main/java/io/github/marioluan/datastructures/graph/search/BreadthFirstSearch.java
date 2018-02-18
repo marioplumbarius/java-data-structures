@@ -7,11 +7,8 @@ import io.github.marioluan.datastructures.queue.Deque;
  * Bread-first search implementation. <br>
  * Goal: Find all vertices connected to s (and a corresponding path).
  */
-public class BreadthFirstSearch {
+public class BreadthFirstSearch extends Decorator {
     private final Graph graph;
-    private boolean[] marked;
-    private Integer[] edgeTo;
-    private Integer[] disTo;
     private final int s;
 
     /**
@@ -27,11 +24,11 @@ public class BreadthFirstSearch {
         edgeTo = new Integer[graph.V()];
         disTo = new Integer[graph.V()];
 
-        search(s);
+        search();
     }
 
     // TODO: time complexity
-    private void search(int s) {
+    private void search() {
         Deque<Integer> queue = new Deque<>();
         queue.addFirst(s);
         int dist = 0;
@@ -40,40 +37,24 @@ public class BreadthFirstSearch {
 
         while (!queue.isEmpty()) {
             int w = queue.removeLast();
+            // child vertices has distance from current
+            // vertex plus one
             dist = disTo[w] + 1;
 
+            // for each connected vertex
             for (int v : graph.adj(w)) {
+                // already marked
                 if (marked[v])
                     continue;
 
+                // track
                 marked[v] = true;
                 disTo[v] = dist;
                 edgeTo[v] = w;
+
+                // enqueue it
                 queue.addFirst(v);
             }
         }
-    }
-
-    /**
-     * Returns all edges found connecting source vertex to all possible destination vertices.
-     *
-     * @return edges found connecting source vertex to all possible destination vertices
-     */
-    public Integer[] getEdgeTo() {
-        return edgeTo;
-    }
-
-    /**
-     * Returns the list of marked (and unmarked) vertices.
-     *
-     * @return the list of marked (and unmarked) vertices
-     */
-    public boolean[] getMarked() {
-        return marked;
-    }
-
-    // TODO: add javadoc
-    public Integer[] getDistTo() {
-        return disTo;
     }
 }

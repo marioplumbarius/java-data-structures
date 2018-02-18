@@ -37,12 +37,12 @@ public class GraphProcessorTest {
                                 int v = 0;
                                 int w = 1;
 
-                                w = Math.abs(v);
-                                v = Math.abs(v);
+                                V = 2;
+                                graph = new AdjacencyListGraph(V);
 
                                 graph.addEdge(v, w);
 
-                                Assert.assertEquals(2, GraphProcessor.degree(graph, v));
+                                Assert.assertEquals(1, GraphProcessor.degree(graph, v));
                             });
                         });
 
