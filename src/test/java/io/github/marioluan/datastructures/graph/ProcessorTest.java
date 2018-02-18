@@ -9,7 +9,7 @@ import java.util.Random;
 import static com.greghaskins.spectrum.Spectrum.*;
 
 @RunWith(Spectrum.class)
-public class GraphProcessorTest {
+public class ProcessorTest {
 
     // let's keep it small so we don't spend time creating empty graphs
     private final int V_MAX_BOUND = 10;
@@ -17,7 +17,7 @@ public class GraphProcessorTest {
     private Graph graph;
 
     {
-        describe("GraphProcessor", () -> {
+        describe("Processor", () -> {
             beforeEach(() -> {
                 V = new Random().nextInt(V_MAX_BOUND);
                 V = Math.abs(V);
@@ -42,7 +42,7 @@ public class GraphProcessorTest {
 
                                 graph.addEdge(v, w);
 
-                                Assert.assertEquals(1, GraphProcessor.degree(graph, v));
+                                Assert.assertEquals(1, Processor.degree(graph, v));
                             });
                         });
 
@@ -52,7 +52,7 @@ public class GraphProcessorTest {
                                 int v = 0;
 
                                 Graph graph = new AdjacencyListGraph(V);
-                                Assert.assertEquals(0, GraphProcessor.degree(graph, v));
+                                Assert.assertEquals(0, Processor.degree(graph, v));
                             });
                         });
                     });
@@ -66,7 +66,7 @@ public class GraphProcessorTest {
                             Graph graph = new AdjacencyListGraph(V);
 
                             try {
-                                GraphProcessor.degree(graph, v);
+                                Processor.degree(graph, v);
                             } catch (ArrayIndexOutOfBoundsException ex) {
                                 thrown = true;
                             }
@@ -85,7 +85,7 @@ public class GraphProcessorTest {
                         });
 
                         it("returns zero", () -> {
-                            Assert.assertEquals(0, GraphProcessor.maxDegree(graph));
+                            Assert.assertEquals(0, Processor.maxDegree(graph));
                         });
                     });
 
@@ -104,7 +104,7 @@ public class GraphProcessorTest {
                         it("returns the maximum degree found", () -> {
                             int expected = 3;
 
-                            Assert.assertEquals(expected, GraphProcessor.maxDegree(graph));
+                            Assert.assertEquals(expected, Processor.maxDegree(graph));
                         });
                     });
                 });
@@ -118,7 +118,7 @@ public class GraphProcessorTest {
                         });
 
                         it("returns zero", () -> {
-                            Assert.assertEquals(0, GraphProcessor.averageDegree(graph), 1);
+                            Assert.assertEquals(0, Processor.averageDegree(graph), 1);
                         });
                     });
 
@@ -137,7 +137,7 @@ public class GraphProcessorTest {
                         it("returns the average degree", () -> {
                             double expected = 2.0 * graph.E() / graph.V();
 
-                            Assert.assertEquals(expected, GraphProcessor.averageDegree(graph), 1);
+                            Assert.assertEquals(expected, Processor.averageDegree(graph), 1);
                         });
                     });
                 });
@@ -151,7 +151,7 @@ public class GraphProcessorTest {
                         });
 
                         it("returns zero", () -> {
-                            Assert.assertEquals(0, GraphProcessor.numberOfSelfLoops(graph));
+                            Assert.assertEquals(0, Processor.numberOfSelfLoops(graph));
                         });
                     });
 
@@ -169,7 +169,7 @@ public class GraphProcessorTest {
                             });
 
                             it("returns the number of self-loops", () -> {
-                                Assert.assertEquals(2, GraphProcessor.numberOfSelfLoops(graph));
+                                Assert.assertEquals(2, Processor.numberOfSelfLoops(graph));
                             });
                         });
                     });

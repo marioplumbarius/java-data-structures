@@ -4,9 +4,9 @@ package io.github.marioluan.datastructures.graph;
 /**
  * Common {@link Graph} operations.
  */
-public final class GraphProcessor {
+public final class Processor {
 
-    private GraphProcessor() {
+    private Processor() {
     }
 
     /**
