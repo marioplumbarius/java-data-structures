@@ -45,10 +45,12 @@ Head over [CONTRIBUTING.md](CONTRIBUTING.md).
         - [Linear Probing Hash Table](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/symboltable/hash/LinearProbingHashTable.java)
 - Graph
     - [Undirected](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/graph/Undirected.java)
-    - [Digraph](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/graph/Digraph.java)
+    - Directed
+        - [Digraph](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/graph/Digraph.java)
     - Search Algorithms
-        - [Depth-First Search](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/graph/DepthFirstSearch.java)
-        - [Breadth-First Search](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/graph/BreadthFirstSearch.java)
+        - [Depth-First Search](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/graph/search/DepthFirstSearch.java)
+        - [Breadth-First Search](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/graph/search/BreadthFirstSearch.java)
+        - [Connected Components](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/graph/search/ConnectedComponents.java)
 
 ## References
 - [https://www.coursera.org/learn/algorithms-part1](https://www.coursera.org/learn/algorithms-part1)
