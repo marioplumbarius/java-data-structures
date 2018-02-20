@@ -5,22 +5,22 @@ import io.github.marioluan.datastructures.multiset.Bag;
 import java.util.stream.IntStream;
 
 /**
- * Adjacency-list {@link Graph graph} representation.<br>
+ * Undirected {@link Graph} implementation using an adjacency-list.<br>
  * Maintain vertex-indexed array of lists.<br>
  * <b>Space complexity: E + V</b>
  */
-public class AdjacencyListGraph implements Graph {
+public class Undirected implements Graph {
     private final int V;
     private int E;
     private Bag<Integer>[] adj;
 
     /**
-     * Creates an empty {@link AdjacencyListGraph}.<br>
+     * Creates an empty {@link Digraph}.<br>
      * time complexity: O(V)
      *
      * @param V number of vertices
      */
-    public AdjacencyListGraph(int V) {
+    public Undirected(int V) {
         this.V = V;
         adj = (Bag<Integer>[]) new Bag[V];
         IntStream.range(0, V).forEach(v -> adj[v] = new Bag<>());

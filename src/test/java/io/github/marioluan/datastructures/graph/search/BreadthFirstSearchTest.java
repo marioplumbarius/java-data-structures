@@ -1,7 +1,7 @@
 package io.github.marioluan.datastructures.graph.search;
 
 import com.greghaskins.spectrum.Spectrum;
-import io.github.marioluan.datastructures.graph.AdjacencyListGraph;
+import io.github.marioluan.datastructures.graph.Undirected;
 import io.github.marioluan.datastructures.graph.Graph;
 import org.junit.Assert;
 import org.junit.runner.RunWith;
@@ -16,7 +16,7 @@ public class BreadthFirstSearchTest {
     {
         describe("BreadthFirstSearch", () -> {
             beforeEach(() -> {
-                graph = new AdjacencyListGraph(6);
+                graph = new Undirected(6);
                 graph.addEdge(0, 1);
                 graph.addEdge(0, 5);
                 graph.addEdge(0, 2);

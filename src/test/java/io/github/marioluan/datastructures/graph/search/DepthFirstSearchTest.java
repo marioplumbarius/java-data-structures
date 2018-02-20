@@ -1,9 +1,8 @@
 package io.github.marioluan.datastructures.graph.search;
 
 import com.greghaskins.spectrum.Spectrum;
-import io.github.marioluan.datastructures.graph.AdjacencyListGraph;
+import io.github.marioluan.datastructures.graph.Undirected;
 import io.github.marioluan.datastructures.graph.Graph;
-import io.github.marioluan.datastructures.graph.search.DepthFirstSearch;
 import org.junit.Assert;
 import org.junit.runner.RunWith;
 
@@ -17,7 +16,7 @@ public class DepthFirstSearchTest {
     {
         describe("DepthFirstSearch", () -> {
             beforeEach(() -> {
-                graph = new AdjacencyListGraph(13);
+                graph = new Undirected(13);
                 graph.addEdge(0, 1);
                 graph.addEdge(0, 2);
                 graph.addEdge(0, 5);

@@ -9,9 +9,9 @@ import java.util.Random;
 import static com.greghaskins.spectrum.Spectrum.*;
 
 @RunWith(Spectrum.class)
-public class AdjacencyListGraphTest {
+public class UndirectedTest {
 
-    private AdjacencyListGraph subject;
+    private Undirected subject;
 
     private int V;
 
@@ -19,10 +19,10 @@ public class AdjacencyListGraphTest {
     private int w;
 
     {
-        describe("AdjacencyListGraph", () -> {
+        describe("Undirected", () -> {
             beforeEach(() -> {
                 V = 2;
-                subject = new AdjacencyListGraph(V);
+                subject = new Undirected(V);
                 w = new Random().nextInt(V);
                 v = new Random().nextInt(V);
             });
@@ -40,7 +40,7 @@ public class AdjacencyListGraphTest {
                 });
 
                 it("creates an empty graph", () -> {
-                    subject = new AdjacencyListGraph(V);
+                    subject = new Undirected(V);
 
                     Assert.assertEquals(V, subject.V());
                     Assert.assertEquals(0, subject.E());
@@ -49,8 +49,8 @@ public class AdjacencyListGraphTest {
 
             describe("#addEdge", () -> {
                 beforeEach(() -> {
-                    w = new Random().nextInt(V);
-                    v = new Random().nextInt(V);
+                    w = 0;
+                    v = 1;
 
                     subject.addEdge(v, w);
                 });
@@ -85,7 +85,7 @@ public class AdjacencyListGraphTest {
             describe("#V", () -> {
                 beforeEach(() -> {
                     V = 2;
-                    subject = new AdjacencyListGraph(V);
+                    subject = new Undirected(V);
                 });
 
                 it("returns the number of vertices", () -> {

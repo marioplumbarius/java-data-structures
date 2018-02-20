@@ -4,8 +4,20 @@ package io.github.marioluan.datastructures.graph.search;
  * Decorator which provides methods shared by {@link BreadthFirstSearch} and {@link DepthFirstSearch}.
  */
 public abstract class Decorator {
+
+    /**
+     * List of all edges found connecting source vertex to all possible destination vertices.
+     */
     protected Integer[] edgeTo;
+
+    /**
+     * List of marked (and unmarked) vertices.
+     */
     protected boolean[] marked;
+
+    /**
+     * List of distance between source and destination vertices.
+     */
     protected Integer[] disTo;
 
     /**

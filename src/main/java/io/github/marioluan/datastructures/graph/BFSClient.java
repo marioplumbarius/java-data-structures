@@ -1,13 +1,13 @@
 package io.github.marioluan.datastructures.graph;
 
-import io.github.marioluan.datastructures.graph.search.DepthFirstSearch;
+import io.github.marioluan.datastructures.graph.search.BreadthFirstSearch;
 import io.github.marioluan.datastructures.stack.LinkedList;
 
 /**
- * Implementation of hypothetical DFS client.
+ * Implementation of hypothetical BFS client.
  */
-public class DFSPaths implements Paths {
-    private final DepthFirstSearch DFS;
+public class BFSClient implements Paths {
+    private final BreadthFirstSearch BFS;
     private final int s;
 
     /**
@@ -16,14 +16,14 @@ public class DFSPaths implements Paths {
      * @param G a graph
      * @param s a given source vertex
      */
-    public DFSPaths(Graph G, int s) {
-        DFS = new DepthFirstSearch(G, s);
+    public BFSClient(Graph G, int s) {
+        BFS = new BreadthFirstSearch(G, s);
         this.s = s;
     }
 
     @Override
     public boolean hasPathTo(int v) {
-        return DFS.getMarked()[v];
+        return BFS.getMarked()[v];
     }
 
     @Override
@@ -32,7 +32,7 @@ public class DFSPaths implements Paths {
         if (!hasPathTo(v)) return null;
 
         // makes code more readable
-        Integer[] edgeTo = DFS.getEdgeTo();
+        Integer[] edgeTo = BFS.getEdgeTo();
         LinkedList<Integer> path = new LinkedList<>();
 
         // add destination vertex to stack

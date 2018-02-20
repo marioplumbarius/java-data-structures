@@ -1,6 +1,6 @@
 package io.github.marioluan.datastructures.factory;
 
-import io.github.marioluan.datastructures.graph.AdjacencyListGraph;
+import io.github.marioluan.datastructures.graph.Undirected;
 import io.github.marioluan.datastructures.graph.Graph;
 
 public final class GraphFactory {
@@ -9,7 +9,7 @@ public final class GraphFactory {
      * <strong>https://www.coursera.org/learn/algorithms-part2/lecture/mW9aG/depth-first-search</strong>
      */
     public static Graph buildForDFSLecture() {
-        Graph graph = new AdjacencyListGraph(13);
+        Graph graph = new Undirected(13);
 
         graph.addEdge(0, 1);
         graph.addEdge(0, 2);

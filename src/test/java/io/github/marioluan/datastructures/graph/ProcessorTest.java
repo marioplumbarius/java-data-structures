@@ -21,7 +21,7 @@ public class ProcessorTest {
             beforeEach(() -> {
                 V = new Random().nextInt(V_MAX_BOUND);
                 V = Math.abs(V);
-                graph = new AdjacencyListGraph(V);
+                graph = new Undirected(V);
             });
 
             afterEach(() -> {
@@ -38,7 +38,7 @@ public class ProcessorTest {
                                 int w = 1;
 
                                 V = 2;
-                                graph = new AdjacencyListGraph(V);
+                                graph = new Undirected(V);
 
                                 graph.addEdge(v, w);
 
@@ -51,7 +51,7 @@ public class ProcessorTest {
                                 int V = 2;
                                 int v = 0;
 
-                                Graph graph = new AdjacencyListGraph(V);
+                                Graph graph = new Undirected(V);
                                 Assert.assertEquals(0, Processor.degree(graph, v));
                             });
                         });
@@ -63,7 +63,7 @@ public class ProcessorTest {
                             int V = 2;
                             int v = 2;
 
-                            Graph graph = new AdjacencyListGraph(V);
+                            Graph graph = new Undirected(V);
 
                             try {
                                 Processor.degree(graph, v);
@@ -81,7 +81,7 @@ public class ProcessorTest {
                 describe("with graph G", () -> {
                     describe("when it's empty", () -> {
                         beforeEach(() -> {
-                            graph = new AdjacencyListGraph(V);
+                            graph = new Undirected(V);
                         });
 
                         it("returns zero", () -> {
@@ -92,7 +92,7 @@ public class ProcessorTest {
                     describe("when it isn't empty", () -> {
                         beforeEach(() -> {
                             V = 4;
-                            graph = new AdjacencyListGraph(V);
+                            graph = new Undirected(V);
                             graph.addEdge(0, 1);
                             graph.addEdge(0, 2);
                             graph.addEdge(0, 3);
@@ -114,7 +114,7 @@ public class ProcessorTest {
                 describe("with graph G", () -> {
                     describe("when it's empty", () -> {
                         beforeEach(() -> {
-                            graph = new AdjacencyListGraph(V);
+                            graph = new Undirected(V);
                         });
 
                         it("returns zero", () -> {
@@ -125,7 +125,7 @@ public class ProcessorTest {
                     describe("when it isn't empty", () -> {
                         beforeEach(() -> {
                             V = 4;
-                            graph = new AdjacencyListGraph(V);
+                            graph = new Undirected(V);
                             graph.addEdge(0, 1);
                             graph.addEdge(0, 2);
                             graph.addEdge(0, 3);
@@ -147,7 +147,7 @@ public class ProcessorTest {
                 describe("with graph G", () -> {
                     describe("when it's empty", () -> {
                         beforeEach(() -> {
-                            graph = new AdjacencyListGraph(V);
+                            graph = new Undirected(V);
                         });
 
                         it("returns zero", () -> {
@@ -158,7 +158,7 @@ public class ProcessorTest {
                     describe("when it isn't empty", () -> {
                         beforeEach(() -> {
                             V = 2;
-                            graph = new AdjacencyListGraph(V);
+                            graph = new Undirected(V);
                         });
 
                         describe("when there are self-loops", () -> {

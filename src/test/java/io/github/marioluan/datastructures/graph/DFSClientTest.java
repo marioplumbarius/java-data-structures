@@ -8,12 +8,12 @@ import org.junit.runner.RunWith;
 import static com.greghaskins.spectrum.Spectrum.*;
 
 @RunWith(Spectrum.class)
-public class DFSPathsTest {
+public class DFSClientTest {
     private Paths subject;
     private Graph graph;
 
     {
-        describe("DFSPaths", () -> {
+        describe("DFSClient", () -> {
             beforeEach(() -> {
                 graph = GraphFactory.buildForDFSLecture();
             });
@@ -40,7 +40,7 @@ public class DFSPathsTest {
                         // for each source vertex within the cluster
                         for (int s = 0; s < cluster.length; s++) {
                             int sourceVertex = cluster[s];
-                            subject = new DFSPaths(graph, sourceVertex);
+                            subject = new DFSClient(graph, sourceVertex);
 
                             // for each destination vertex
                             for (int v = 0; v < cluster.length; v++) {
@@ -63,7 +63,7 @@ public class DFSPathsTest {
                     // for each source vertex within the cluster
                     for (int s = 0; s < cluster.length; s++) {
                         int sourceVertex = cluster[s];
-                        subject = new DFSPaths(graph, sourceVertex);
+                        subject = new DFSClient(graph, sourceVertex);
 
                         // for each destination vertex
                         for (int v = 0; v < cluster.length; v++) {
