@@ -3,12 +3,12 @@ package io.github.marioluan.datastructures.factory;
 import io.github.marioluan.datastructures.graph.Undirected;
 import io.github.marioluan.datastructures.graph.Graph;
 
-public final class GraphFactory {
+public final class UndirectedGraphFactory {
     /**
      * Builds a graph with the same vertices and edges from lecture slides. <br>
      * <strong>https://www.coursera.org/learn/algorithms-part2/lecture/mW9aG/depth-first-search</strong>
      */
-    public static Graph buildForDFSLecture() {
+    public static Graph build() {
         Graph graph = new Undirected(13);
 
         graph.addEdge(0, 1);
@@ -20,7 +20,6 @@ public final class GraphFactory {
         graph.addEdge(4, 5);
         graph.addEdge(3, 5);
 
-        // 7 -> 8
         graph.addEdge(7, 8);
 
         graph.addEdge(9, 10);
