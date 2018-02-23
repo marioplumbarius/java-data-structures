@@ -5,11 +5,15 @@ import io.github.marioluan.datastructures.queue.Deque;
 
 /**
  * Bread-first search implementation. <br>
- * Goal: Find all vertices connected to s (and a corresponding path).
+ * Put unvisited vertices on a queue. <br>
+ * Goal: Find path from s to v that uses fewest number of edges.
  */
-public class BreadthFirstSearch extends Decorator {
+public class BreadthFirstSearch extends PathDecorator {
     private final Graph graph;
     private final int s;
+    private boolean[] marked;
+    private Integer[] edgeTo;
+    private Integer[] disTo;
 
     /**
      * Performs a BFS.
@@ -56,5 +60,24 @@ public class BreadthFirstSearch extends Decorator {
                 queue.addFirst(v);
             }
         }
+    }
+
+    /**
+     * Returns the distance from all source to all destination vertices.
+     *
+     * @return the distance from all source to all destination vertices
+     */
+    protected Integer[] getDistTo() {
+        return disTo;
+    }
+
+    @Override
+    protected Integer[] getEdgeTo() {
+        return edgeTo;
+    }
+
+    @Override
+    protected boolean[] getMarked() {
+        return marked;
     }
 }

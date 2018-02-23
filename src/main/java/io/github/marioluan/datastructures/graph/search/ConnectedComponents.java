@@ -3,12 +3,13 @@ package io.github.marioluan.datastructures.graph.search;
 import io.github.marioluan.datastructures.graph.Graph;
 
 /**
- * Implementation of a Connected Components data structure using {@link DepthFirstSearch}.
+ * Implementation of a Connected Components data structure using {@link DepthFirstSearch} algorithm.
  */
-public class ConnectedComponents extends MarkedDecorator {
+public class ConnectedComponents {
     private final Graph graph;
     private int[] id;
     private int count;
+    private boolean[] marked;
 
     /**
      * Builds a cluster of connected components for every source vertex in the {@link Graph graph}.

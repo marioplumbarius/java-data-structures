@@ -26,11 +26,6 @@ public class ConnectedComponentsTest {
             });
 
             describe("#constructor", () -> {
-                it("marks visited vertices", () -> {
-                    for (boolean marked : subject.getMarked())
-                        Assert.assertTrue(marked);
-                });
-
                 it("group vertices into components", () -> {
                     Assert.assertEquals(3, subject.getCount());
                 });
@@ -40,7 +35,6 @@ public class ConnectedComponentsTest {
 
                     for (int i = 0; i < graph.V(); i++)
                         Assert.assertTrue(expected[i] == subject.id(i));
-
                 });
             });
 

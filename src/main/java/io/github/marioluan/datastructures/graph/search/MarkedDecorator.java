@@ -1,22 +1,14 @@
 package io.github.marioluan.datastructures.graph.search;
 
 /**
- * Decorator which provides methods shared by {@link BreadthFirstSearch} and {@link DepthFirstSearch}.
+ * Decorator of {@link Graph graphs} which need marked functionality.
  */
 public abstract class MarkedDecorator {
-
-    /**
-     * List of marked (and unmarked) vertices.
-     */
-    protected boolean[] marked;
 
     /**
      * Returns the list of marked (and unmarked) vertices.
      *
      * @return the list of marked (and unmarked) vertices
      */
-    public boolean[] getMarked() {
-        return marked;
-    }
-
+    protected abstract boolean[] getMarked();
 }

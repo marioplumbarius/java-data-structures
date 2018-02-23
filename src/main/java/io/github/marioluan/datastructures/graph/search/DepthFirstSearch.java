@@ -4,10 +4,13 @@ import io.github.marioluan.datastructures.graph.Graph;
 
 /**
  * Depth-first search implementation. <br>
+ * Put unvisited vertices on a stack. <br>
  * Goal: Find all vertices connected to s (and a corresponding path).
  */
-public class DepthFirstSearch extends Decorator {
+public class DepthFirstSearch extends PathDecorator {
     private final Graph graph;
+    private boolean[] marked;
+    private Integer[] edgeTo;
 
     /**
      * Performs a DFS.
@@ -37,5 +40,15 @@ public class DepthFirstSearch extends Decorator {
             search(w);
             edgeTo[w] = v;
         }
+    }
+
+    @Override
+    protected Integer[] getEdgeTo() {
+        return edgeTo;
+    }
+
+    @Override
+    protected boolean[] getMarked() {
+        return marked;
     }
 }

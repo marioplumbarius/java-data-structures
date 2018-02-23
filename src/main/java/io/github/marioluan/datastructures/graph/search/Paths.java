@@ -1,4 +1,6 @@
-package io.github.marioluan.datastructures.graph;
+package io.github.marioluan.datastructures.graph.search;
+
+import io.github.marioluan.datastructures.graph.Graph;
 
 /**
  * Generic representation of a {@link Graph} client.
@@ -20,5 +22,6 @@ public interface Paths {
      * @param v destination vertex v
      * @return the path from s to v or null if no such path
      */
+    // TODO: implement me!
     Iterable<Integer> pathTo(int v);
 };
