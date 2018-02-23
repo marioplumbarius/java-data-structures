@@ -22,11 +22,11 @@ docker-compose run gradle gradle clean test check
 Head over [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Available data structures
+- Multiset
+    - [Bag](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/multiset/Bag.java)
 - Stack
     - [Linked List](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/stack/LinkedList.java)
     - [Dynamic Array](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/stack/DynamicArray.java)
-    - Multiset
-        - [Bag](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/multiset/Bag.java)
 - Queue
     - [Deque](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/queue/Deque.java)
     - [Randomized Queue](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/queue/RandomizedQueue.java)
