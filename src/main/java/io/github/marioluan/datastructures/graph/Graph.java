@@ -36,10 +36,16 @@ public interface Graph {
     int E();
 
     /**
+     * Returns its reverse order.
+     *
+     * @return its reverse order
+     */
+    Graph reverse();
+
+    /**
      * Returns its string representation.
      *
      * @return string representation
      */
-    @Override
     String toString();
 }

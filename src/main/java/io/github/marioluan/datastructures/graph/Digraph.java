@@ -52,6 +52,17 @@ public class Digraph implements Graph {
         return E;
     }
 
+    @Override
+    public Graph reverse() {
+        Digraph reversed = new Digraph(V);
+
+        for (int i = 0; i < V; i++)
+            for (int s : adj(i))
+                reversed.addEdge(s, i);
+
+        return reversed;
+    }
+
     // TODO: implement me!
     @Override
     public String toString() {

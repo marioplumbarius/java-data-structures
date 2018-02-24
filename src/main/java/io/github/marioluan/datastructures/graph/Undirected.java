@@ -53,6 +53,11 @@ public class Undirected implements Graph {
         return E;
     }
 
+    @Override
+    public Graph reverse() {
+        return this;
+    }
+
     // TODO: implement me!
     @Override
     public String toString() {

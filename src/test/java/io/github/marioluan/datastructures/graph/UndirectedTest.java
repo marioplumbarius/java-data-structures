@@ -1,10 +1,13 @@
 package io.github.marioluan.datastructures.graph;
 
 import com.greghaskins.spectrum.Spectrum;
+import io.github.marioluan.datastructures.factory.DigraphGraphFactory;
+import io.github.marioluan.datastructures.factory.UndirectedGraphFactory;
 import org.junit.Assert;
 import org.junit.runner.RunWith;
 
 import java.util.Random;
+import java.util.stream.IntStream;
 
 import static com.greghaskins.spectrum.Spectrum.*;
 
@@ -103,6 +106,14 @@ public class UndirectedTest {
 
                 it("returns the number of edges", () -> {
                     Assert.assertEquals(1, subject.E());
+                });
+            });
+
+            describe("#reverse", () -> {
+                it("returns itself", () -> {
+                    subject = UndirectedGraphFactory.build();
+                    Undirected reversed = (Undirected) subject.reverse();
+                    Assert.assertSame(reversed, subject);
                 });
             });
 
