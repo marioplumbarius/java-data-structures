@@ -2,7 +2,6 @@ package io.github.marioluan.datastructures.factory;
 
 import io.github.marioluan.datastructures.graph.Digraph;
 import io.github.marioluan.datastructures.graph.Graph;
-import io.github.marioluan.datastructures.graph.Undirected;
 
 public final class DigraphGraphFactory {
     /**

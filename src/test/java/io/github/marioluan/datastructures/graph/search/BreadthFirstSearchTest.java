@@ -5,7 +5,6 @@ import io.github.marioluan.datastructures.factory.DigraphGraphFactory;
 import io.github.marioluan.datastructures.factory.UndirectedGraphFactory;
 import io.github.marioluan.datastructures.graph.Graph;
 import io.github.marioluan.datastructures.graph.Undirected;
-import org.hamcrest.CoreMatchers;
 import org.junit.Assert;
 import org.junit.runner.RunWith;
 

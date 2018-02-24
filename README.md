@@ -45,12 +45,13 @@ Head over [CONTRIBUTING.md](CONTRIBUTING.md).
         - [Linear Probing Hash Table](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/symboltable/hash/LinearProbingHashTable.java)
 - Graph
     - [Undirected](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/graph/Undirected.java)
-    - Directed
-        - [Digraph](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/graph/Digraph.java)
-    - Search Algorithms
+    - [Directed (Digraph)](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/graph/Digraph.java)
+    - Search
         - [Depth-First Search](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/graph/search/DepthFirstSearch.java)
         - [Breadth-First Search](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/graph/search/BreadthFirstSearch.java)
         - [Connected Components](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/graph/search/ConnectedComponents.java)
+    - Sort
+        - [Topological Sort](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/graph/sort/TopologicalSort.java)
 
 ## References
 - [https://www.coursera.org/learn/algorithms-part1](https://www.coursera.org/learn/algorithms-part1)
