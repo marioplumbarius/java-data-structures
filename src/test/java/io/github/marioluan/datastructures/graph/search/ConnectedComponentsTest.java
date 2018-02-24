@@ -26,19 +26,6 @@ public class ConnectedComponentsTest {
                 subject = null;
             });
 
-            describe("#constructor", () -> {
-                it("group vertices into components", () -> {
-                    Assert.assertEquals(3, subject.getCount());
-                });
-
-                it("group vertices from same components together", () -> {
-                    int[] expected = new int[]{0, 0, 0, 0, 0, 0, 0, 1, 1, 2, 2, 2, 2};
-
-                    for (int i = 0; i < graph.V(); i++)
-                        Assert.assertTrue(expected[i] == subject.id(i));
-                });
-            });
-
             describe("#getCount", () -> {
                 it("returns the number of components", () -> {
                     Assert.assertEquals(3, subject.getCount());
