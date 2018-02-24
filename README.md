@@ -48,6 +48,7 @@ Head over [CONTRIBUTING.md](CONTRIBUTING.md).
     - [Directed (Digraph)](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/graph/Digraph.java)
     - Connectivity
         - [Connected Components](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/graph/search/ConnectedComponents.java)
+        - [Strongly-Connected Components](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/graph/search/StronglyConnectedComponents.java)
     - Search
         - [Breadth-First Search](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/graph/search/BreadthFirstSearch.java)
         - [Depth-First Search](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/graph/search/DepthFirstSearch.java)
