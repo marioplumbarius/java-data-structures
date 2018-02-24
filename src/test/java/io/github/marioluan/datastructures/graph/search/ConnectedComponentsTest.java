@@ -52,6 +52,46 @@ public class ConnectedComponentsTest {
                         Assert.assertTrue(expected[i] == subject.id(i));
                 });
             });
+
+            describe("#connected", () -> {
+                describe("when vertex s is connected to vertex v", () -> {
+                    it("returns true", () -> {
+                        // clusters of [connected] sources vertices
+                        int[][] clusters = new int[][]{
+                            new int[]{0, 1, 2, 3, 4, 5, 6},
+                            new int[]{7, 8},
+                            new int[]{9, 10, 11, 12}
+                        };
+
+                        // for each cluster
+                        for (int c = 0; c < clusters.length; c++) {
+                            // pick a cluster of connected vertices
+                            int[] cluster = clusters[c];
+
+                            // for each source vertex
+                            for (int v = 0; v < cluster.length; v++)
+                                // for each destination vertex
+                                for (int w = 0; w < cluster.length; w++)
+                                    if (w != v)
+                                        Assert.assertTrue(subject.connected(cluster[w], cluster[v]));
+
+                        }
+                    });
+                });
+
+                describe("when vertex s is not connected to vertex v", () -> {
+                    it("returns false", () -> {
+                        // it's made of one vertex from each cluster
+                        int[] cluster = new int[]{0, 7, 9};
+
+                        // for each destination vertex
+                        for (int v = 0; v < cluster.length; v++)
+                            for (int w = 0; w < cluster.length; w++)
+                                if (w != v)
+                                    Assert.assertFalse(subject.connected(cluster[v], cluster[w]));
+                    });
+                });
+            });
         });
     }
 }

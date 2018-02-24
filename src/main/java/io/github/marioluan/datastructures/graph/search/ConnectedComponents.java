@@ -40,7 +40,7 @@ public class ConnectedComponents {
      *
      * @param s the source vertex
      */
-    // TODO: add time complexity
+    // Time complexity: O(V+E)
     private void search(int s) {
         marked[s] = true;
         id[s] = count;
@@ -67,5 +67,17 @@ public class ConnectedComponents {
      */
     public int id(int v) {
         return id[v];
+    }
+
+    /**
+     * Returns wether vertices s and v are connected.
+     *
+     * @param s source vertex
+     * @param v destination vertex
+     * @return
+     */
+    // Time complexity: O(1)
+    public boolean connected(int s, int v) {
+        return id[s] == id[v];
     }
 }
