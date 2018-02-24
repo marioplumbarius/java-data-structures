@@ -3,7 +3,8 @@ package io.github.marioluan.datastructures.graph.search;
 import io.github.marioluan.datastructures.graph.Undirected;
 
 /**
- * Implementation of a Connected Components data structure using {@link DepthFirstSearch} algorithm.
+ * Implementation of a Connected Components data structure using {@link DepthFirstSearch} algorithm. <br>
+ * Goal: given a {@link Undirected undirected graph}, finds whether vertex s is connected to vertex v in O(1).
  */
 public class ConnectedComponents {
     private final Undirected graph;

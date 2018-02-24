@@ -7,6 +7,7 @@ import io.github.marioluan.datastructures.queue.Deque;
  * Bread-first search implementation. <br>
  * Put unvisited vertices on a queue. <br>
  * Goal: Find path from s to v that uses fewest number of edges.
+ * Category: single-source reachability.
  */
 public class BreadthFirstSearch extends PathDecorator {
     private final Graph graph;

@@ -4,12 +4,15 @@ import io.github.marioluan.datastructures.graph.Digraph;
 import io.github.marioluan.datastructures.graph.Graph;
 
 public final class DigraphGraphFactory {
+    private DigraphGraphFactory() {
+    }
+
     /**
      * Builds a graph with the same vertices and edges from lecture slides. <br>
      * <strong>https://algs4.cs.princeton.edu/lectures/42DirectedGraphs.pdf</strong>
      */
-    public static Graph build() {
-        Graph graph = new Digraph(13);
+    public static Digraph build() {
+        Digraph graph = new Digraph(13);
 
         graph.addEdge(0, 1);
         graph.addEdge(0, 5);

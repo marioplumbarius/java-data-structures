@@ -6,6 +6,7 @@ import io.github.marioluan.datastructures.stack.LinkedList;
 /**
  * Implementation of Topological Sort algorithm using {@link io.github.marioluan.datastructures.graph.search.DepthFirstSearch}. <br>
  * Constraint: graph MUST be a DAG (Directed Acyclic Graph).
+ * Category: topoligical sort in a DAG.
  */
 public class TopologicalSort {
     private Graph graph;
@@ -18,7 +19,7 @@ public class TopologicalSort {
      * @param graph the graph to be sorted
      */
     public TopologicalSort(Graph graph) {
-        // TODO: isGraphAcyclic (it cannot have cycles)
+        // TODO: validate if graph is acyclic (it cannot have cycles)
         this.graph = graph;
         reversePost = new LinkedList<>();
         marked = new boolean[graph.V()];
