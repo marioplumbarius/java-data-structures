@@ -70,11 +70,11 @@ public class ConnectedComponents {
     }
 
     /**
-     * Returns wether vertices s and v are connected.
+     * Returns whether vertices s and v are connected.
      *
      * @param s source vertex
      * @param v destination vertex
-     * @return
+     * @return whether vertices s and v are connected
      */
     // Time complexity: O(1)
     public boolean connected(int s, int v) {

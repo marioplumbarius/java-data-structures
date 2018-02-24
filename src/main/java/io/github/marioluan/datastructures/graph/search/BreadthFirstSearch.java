@@ -31,7 +31,7 @@ public class BreadthFirstSearch extends PathDecorator {
         search();
     }
 
-    // TODO: time complexity
+    // Time complexity: O(V + E)
     private void search() {
         Deque<Integer> queue = new Deque<>();
         queue.addFirst(s);

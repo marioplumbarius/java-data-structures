@@ -26,7 +26,7 @@ public class DepthFirstSearch extends PathDecorator {
         search(s);
     }
 
-    // Time complexity: proportional to DFS.getEdgeTo's length
+    // Time complexity: O(V + E)
     private void search(int v) {
         marked[v] = true;
 
