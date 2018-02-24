@@ -1,22 +1,22 @@
 package io.github.marioluan.datastructures.graph.search;
 
-import io.github.marioluan.datastructures.graph.Graph;
+import io.github.marioluan.datastructures.graph.Undirected;
 
 /**
  * Implementation of a Connected Components data structure using {@link DepthFirstSearch} algorithm.
  */
 public class ConnectedComponents {
-    private final Graph graph;
+    private final Undirected graph;
     private int[] id;
     private int count;
     private boolean[] marked;
 
     /**
-     * Builds a cluster of connected components for every source vertex in the {@link Graph graph}.
+     * Builds a cluster of connected components for every source vertex in the {@link Undirected graph}.
      *
      * @param graph a given graph
      */
-    public ConnectedComponents(Graph graph) {
+    public ConnectedComponents(Undirected graph) {
         this.graph = graph;
         marked = new boolean[graph.V()];
         id = new int[graph.V()];

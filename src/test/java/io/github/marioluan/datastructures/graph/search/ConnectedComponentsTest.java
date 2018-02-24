@@ -3,6 +3,7 @@ package io.github.marioluan.datastructures.graph.search;
 import com.greghaskins.spectrum.Spectrum;
 import io.github.marioluan.datastructures.factory.UndirectedGraphFactory;
 import io.github.marioluan.datastructures.graph.Graph;
+import io.github.marioluan.datastructures.graph.Undirected;
 import org.junit.Assert;
 import org.junit.runner.RunWith;
 
@@ -10,7 +11,7 @@ import static com.greghaskins.spectrum.Spectrum.*;
 
 @RunWith(Spectrum.class)
 public class ConnectedComponentsTest {
-    private Graph graph;
+    private Undirected graph;
     private ConnectedComponents subject;
 
     {

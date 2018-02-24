@@ -8,8 +8,8 @@ public final class UndirectedGraphFactory {
      * Builds a graph with the same vertices and edges from lecture slides. <br>
      * <strong>https://www.coursera.org/learn/algorithms-part2/lecture/mW9aG/depth-first-search</strong>
      */
-    public static Graph build() {
-        Graph graph = new Undirected(13);
+    public static Undirected build() {
+        Undirected graph = new Undirected(13);
 
         graph.addEdge(0, 1);
         graph.addEdge(0, 2);

@@ -38,7 +38,7 @@ Head over [CONTRIBUTING.md](CONTRIBUTING.md).
     - [Unordered Linked List](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/symboltable/LinkedListSymbolTable.java)
     - [Ordered Array](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/symboltable/ArraySymbolTable.java)
     - [Binary Search Tree](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/symboltable/BinarySearchTree.java)
-    - [Interval Search Tree](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/symboltable/IntervalSearchTree.java) (TODO: unit tests)
+    - [Interval Search Tree](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/symboltable/IntervalSearchTree.java)
     - [1D Range Count](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/symboltable/OneDRangeCount.java)
     - Hash Table
         - [Separate Chaining Hash Table](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/symboltable/hash/SeparateChainingHashTable.java)
@@ -46,10 +46,11 @@ Head over [CONTRIBUTING.md](CONTRIBUTING.md).
 - Graph
     - [Undirected](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/graph/Undirected.java)
     - [Directed (Digraph)](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/graph/Digraph.java)
-    - Search
-        - [Depth-First Search](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/graph/search/DepthFirstSearch.java)
-        - [Breadth-First Search](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/graph/search/BreadthFirstSearch.java)
+    - Connectivity
         - [Connected Components](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/graph/search/ConnectedComponents.java)
+    - Search
+        - [Breadth-First Search](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/graph/search/BreadthFirstSearch.java)
+        - [Depth-First Search](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/graph/search/DepthFirstSearch.java)
     - Sort
         - [Topological Sort](https://github.com/marioluan/java-data-structures/blob/master/src/main/java/io/github/marioluan/datastructures/graph/sort/TopologicalSort.java)
 
