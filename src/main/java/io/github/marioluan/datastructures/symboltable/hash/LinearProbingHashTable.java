@@ -13,27 +13,25 @@ import io.github.marioluan.datastructures.symboltable.SymbolTable;
  * <li>put</li>
  * <li>delete</li>
  * </ul>
- * 
+ *
+ * @param <Key>   the class type of the comparable key
+ * @param <Value> the class type of the value
  * @author marioluan
- * @param <Key>
- *            the class type of the comparable key
- * @param <Value>
- *            the class type of the value
  */
 public class LinearProbingHashTable<Key extends Comparable<Key>, Value>
-        implements SymbolTable<Key, Value> {
+    implements SymbolTable<Key, Value> {
 
-    private Key[]            keys;
-    private Value[]          values;
-    private int              n;
-    private int              m;
+    private Key[] keys;
+    private Value[] values;
+    private int n;
+    private int m;
     private static final int UNSIGNED_CONST = 0x7fffffff;
-    private static final int EIGHT_TIMES    = 8;
-    private static final int TWICE          = 2;
+    private static final int EIGHT_TIMES = 8;
+    private static final int TWICE = 2;
 
     /**
      * Constructs a new hash table with the given capacity.
-     * 
+     *
      * @param capacity
      */
     @SuppressWarnings("unchecked")
@@ -46,7 +44,7 @@ public class LinearProbingHashTable<Key extends Comparable<Key>, Value>
 
     /**
      * Computes and returns a positive hash value based on the {@link Key key}.
-     * 
+     *
      * @param key
      * @return a positive hash value based on the {@link Key key}
      */
@@ -72,8 +70,10 @@ public class LinearProbingHashTable<Key extends Comparable<Key>, Value>
             resize(TWICE * m);
 
         // handles insertion
+        // hash can eventually return an index greater than keys' length
+        // see: https://github.com/marioluan/java-data-structures/issues/14
         int i;
-        for (i = hash(key); keys[i] != null; i = i + 1 % m) {
+        for (i = hash(key); i < keys.length && keys[i] != null; i = i + 1 % m) {
             // handles updates
             if (keys[i].equals(key)) {
                 values[i] = value;
@@ -89,7 +89,9 @@ public class LinearProbingHashTable<Key extends Comparable<Key>, Value>
 
     @Override
     public Value get(Key key) {
-        for (int i = hash(key); keys[i] != null; i = i + 1 % m)
+        // hash can eventually return an index greater than keys' length
+        // see: https://github.com/marioluan/java-data-structures/issues/14
+        for (int i = hash(key); i < keys.length && keys[i] != null; i = i + 1 % m)
             if (keys[i].equals(key))
                 return values[i];
 
@@ -167,7 +169,7 @@ public class LinearProbingHashTable<Key extends Comparable<Key>, Value>
 
     private void resize(int capacity) {
         LinearProbingHashTable<Key, Value> tmp = new LinearProbingHashTable<>(
-                capacity);
+            capacity);
 
         // copy all items from the current array
         for (int i = 0; i < m; i++)
