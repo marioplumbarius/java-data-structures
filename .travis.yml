@@ -1,9 +1,10 @@
-sudo: required
-
-services:
-  - docker
-
 language: java
 
+jdk:
+- oraclejdk8
+
 script:
-  - docker-compose run gradle gradle clean test check coveralls
+- gradle test
+
+after_success:
+- gradle check coveralls
